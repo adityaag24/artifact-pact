@@ -23,15 +23,16 @@ Indian Institute of Technology, Madras
 
 ## Clone the Benchmark and Enter the Directory
 
->> git clone https://github.com/adityaag24/artifact-pact.git
+> git clone https://github.com/adityaag24/artifact-pact.git
 
->> cd artifact-pact
+> cd artifact-pact
 
 ## Steps to Build the Translator
 
 > The two command below will build the Translator .class files and put them in the bin folder. 
 
 >> ant clean
+
 >> ant 
 
 ## Steps to Run The Standard Benchmarks
