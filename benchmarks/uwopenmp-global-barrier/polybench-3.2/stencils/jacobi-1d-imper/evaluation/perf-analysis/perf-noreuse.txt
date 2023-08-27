@@ -1,0 +1,17 @@
+
+ Performance counter stats for './transnoreuse':
+
+ 2,94,59,52,91,141      instructions                                                  (45.45%)
+    2,51,44,51,068      cache-references                                              (45.46%)
+       5,04,09,162      cache-misses              #    2.005 % of all cache refs      (45.46%)
+   83,86,14,91,641      L1-dcache-loads                                               (45.44%)
+    4,14,19,89,642      L1-dcache-load-misses     #    4.94% of all L1-dcache hits    (45.36%)
+   83,82,12,41,176      L1-dcache-loads                                               (18.19%)
+    1,47,47,51,575      LLC-loads                                                     (18.19%)
+    1,03,47,05,343      LLC-stores                                                    (18.19%)
+   68,16,65,19,311      branch-loads                                                  (27.29%)
+         38,92,007      branch-load-misses                                            (36.36%)
+       1,39,72,076      L1-icache-load-misses                                         (36.37%)
+
+      27.429478514 seconds time elapsed
+

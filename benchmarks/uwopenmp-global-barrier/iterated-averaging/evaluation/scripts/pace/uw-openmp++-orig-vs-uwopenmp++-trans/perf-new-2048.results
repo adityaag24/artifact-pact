@@ -1,0 +1,23 @@
+#iterations = 7579673
+#iterations = 7579673
+#iterations = 7579673
+#iterations = 7579673
+#iterations = 7579673
+
+ Performance counter stats for './new' (5 runs):
+
+3,02,31,48,28,10,650      cycles                     ( +-  1.33% ) [50.00%]
+            16,506      context-switches                                              ( +- 33.70% )
+               642      cpu-migrations                                                ( +- 63.23% )
+50,19,95,43,06,140      instructions              #    0.17  insns per cycle        
+                                                  #    5.38  stalled cycles per insn  ( +-  1.12% ) [62.50%]
+2,70,14,18,84,81,918      stalled-cycles-frontend   #   89.36% frontend cycles idle     ( +-  1.36% ) [62.50%]
+11,89,39,13,26,018      branches                                                      ( +-  1.35% ) [62.50%]
+      60,65,67,539      branch-misses             #    0.05% of all branches          ( +-  5.88% ) [62.50%]
+   35,47,82,27,810      cache-references                                              ( +-  1.16% ) [62.50%]
+   13,27,04,06,070      cache-misses              #   37.404 % of all cache refs      ( +-  2.04% ) [50.00%]
+             5,506      page-faults                                                   ( +-  7.60% )
+      23,37,83,147      L1-icache-load-misses                                         ( +-  2.10% ) [50.00%]
+
+     526.659078573 seconds time elapsed                                          ( +-  1.34% )
+

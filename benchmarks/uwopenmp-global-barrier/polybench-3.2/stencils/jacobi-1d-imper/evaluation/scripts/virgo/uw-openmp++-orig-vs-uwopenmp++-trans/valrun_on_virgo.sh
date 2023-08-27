@@ -1,0 +1,37 @@
+if [ "$#" -ne 4 ]
+then
+    echo "usage run_on_virgo.sh <N> <NTHREADS>  <MACHINE> <TSTEPS>"
+    exit 1
+fi
+N=$1
+NTHREADS=$2
+MACHINE=$3
+TSTEPS=$4
+SRCDIR=../../../..
+
+rm trans; gcc -O3 -fopenmp -I $SRCDIR/../../utilities -I $SRCDIR/../../stencils/jacobi-1d-imper $SRCDIR/../../utilities/polybench.c -DPOLYBENCH_TIME $SRCDIR/rose_jacobi-1d-imper_final.c -o trans 
+
+echo "#!/bin/bash
+#@ output     = jacobi-1d_"$N"_"$TSTEPS"_trans.out
+#@ error      = jacobi-1d_"$N"_"$TSTEPS"_trans.err
+#@ job_type   = MPICH
+
+#@ class      = Csverylong
+
+#@ node = 1
+
+#@ tasks_per_node = 32
+#@ requirements = (Machine == \"$MACHINE\")
+#@ environment = COPY_ALL
+#@ resources = ConsumableMemory(60gb)
+#@ queue
+Jobid=\`echo \$LOADL_STEP_ID | cut -f 6 -d .\`
+olddir=`pwd`
+tmpdir=\$HOME/scratch/job\$Jobid
+mkdir -p \$tmpdir; cd \$tmpdir
+cp -R \$LOADL_STEP_INITDIR/* \$tmpdir
+export OMP_NUM_THREADS=$NTHREADS
+valgrind --tool=memcheck ./trans
+cp massif.out.* \$olddir/
+rm -rf \$tmpdir
+cd -;" > openmp_trans.cmd

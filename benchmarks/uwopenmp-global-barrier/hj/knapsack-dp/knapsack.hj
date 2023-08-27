@@ -1,0 +1,92 @@
+import java.io.*;
+import java.util.*;
+import java.math.*;
+
+public class knapsack
+{
+
+	int table[];
+	int N;
+	int C;
+	int weights[];
+	int profits[];
+	int newProfit[];
+	int oldProfit[];
+
+
+	int MAX(int x, int y) {
+		int result = (x > y) ? x : y;
+		return result;
+	}
+
+	void do_knapSack(int oldP[], int newP[], int i, int k){
+		if(i >= N)//0 to N-1 row index
+			return;
+		if(k == 0)
+			newP[k] = 0;
+		if(k < weights[i])
+			newP[k] = oldP[k];
+		else
+			newP[k] = MAX(oldP[k], profits[i] + oldP[k-weights[i]]);
+		next;
+		do_knapSack(newP, oldP, i+1, k);
+	}
+
+	public static void main(String args[]) throws Exception {
+		int i,j;
+		String inputFile;
+		
+		knapsack KS = new knapsack();
+		inputFile = args[0];
+
+		FileReader fr = new FileReader(inputFile);
+		BufferedReader br = new BufferedReader(fr);
+		String s = br.readLine();
+		String s_split[] = s.split(" ");
+		
+
+		KS.N = Integer.parseInt(s_split[0]);
+		KS.C = Integer.parseInt(s_split[1]);
+		
+		KS.weights = new int[KS.N];
+		KS.profits = new int[KS.N];
+
+		for(i=0; i<KS.N; i++) {
+			s = br.readLine();
+			s_split = s.split(" ");
+			
+			KS.weights[i] = Integer.parseInt(s_split[0]);
+			KS.profits[i] = Integer.parseInt(s_split[1]);
+		}
+
+		KS.newProfit = new int[KS.C + 1];
+		KS.oldProfit = new int[KS.C + 1];
+
+		for (j=0; j<=KS.C; j++) {
+			if (j<KS.weights[0])
+				KS.oldProfit[j]= 0;
+			else
+				KS.oldProfit[j] = KS.profits[0];
+		}
+
+		long start_time = System.nanoTime();
+		forall (int [k] : [0: KS.C]) {
+			KS.do_knapSack(KS.oldProfit, KS.newProfit, 0, k);
+		}
+		long end_time = System.nanoTime();
+
+	
+		
+		if(KS.oldProfit[KS.C] > KS.newProfit[KS.C])
+			System.out.println("The optimal profit is "+ KS.oldProfit[KS.C]);
+		else
+			System.out.println("The optimal profit is "+ KS.newProfit[KS.C]);
+
+		double elapsed_time = (double)(end_time - start_time)/(Math.pow(10,9));
+			
+		System.err.println("Run time = "+elapsed_time);	
+
+
+
+	}
+}

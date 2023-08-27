@@ -1,0 +1,10 @@
+Preprocessing gaussSeidelUWPro.c using gcc
+Preprocessing jacobian1DUWPro.c using gcc
+Preprocessing jacobian2DUWPro.c using gcc
+Preprocessing jacobian4DUWPro.c using gcc
+Preprocessing successiveOverRelaxationUWPro.c using gcc
+Processing gaussSeidelUWPro.i
+Processing jacobian1DUWPro.i
+Processing jacobian2DUWPro.i
+Processing jacobian4DUWPro.i
+Processing successiveOverRelaxationUWPro.i

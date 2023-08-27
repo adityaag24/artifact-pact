@@ -1,0 +1,88 @@
+import java.io.*;
+import java.util.*;
+
+public class IA
+{
+
+	double newA[];
+	double oldA[];
+	double diff[];
+	double temp[];
+
+	double epsilon;
+	double delta;
+
+	double EPSILON;
+	double VAL;
+	int N;
+	int iters;
+
+	public IA()
+	{
+		N = 8;
+		EPSILON = 20e-4;
+		VAL = Float.MAX_VALUE*(1.0/100000000000000000000000000000000.0);
+		iters = 0;
+	}
+
+		
+	void sum(double d[]) {
+		double res = 0.0;
+		int i;
+		for (i = 1; i <= N; i++)
+			res += d[i];
+
+		delta = res;
+	}
+
+	public static void main(String args[]) throws Exception {
+		
+		int j;
+
+		IA Iter_avg = new IA();
+		
+		Iter_avg.oldA = new double[Iter_avg.N + 2];
+		Iter_avg.newA = new double[Iter_avg.N + 2];
+		Iter_avg.diff = new double[Iter_avg.N + 2];
+
+		Iter_avg.oldA[0] = Iter_avg.EPSILON/(Iter_avg.N + 1);
+
+		Random generator = 	new Random(101);
+
+
+
+		for(j=1; j<=Iter_avg.N; j++)
+		{
+			Iter_avg.oldA[j] = generator.nextDouble();
+		}
+
+		Iter_avg.oldA[Iter_avg.N + 1] = Iter_avg.EPSILON/(Iter_avg.N + 1);
+
+		Iter_avg.epsilon = Iter_avg.EPSILON;
+		Iter_avg.delta = Iter_avg.epsilon + 1;
+
+
+		long start_time = System.nanoTime();
+		forall (int [i] :[1:Iter_avg.N]) {
+			while (Iter_avg.delta > Iter_avg.epsilon) {
+				Iter_avg.newA[i] = (Iter_avg.oldA[i-1] + Iter_avg.oldA[i+1])/2;
+				Iter_avg.diff[i] = Math.abs(Iter_avg.newA[i] - Iter_avg.oldA[i]);
+				next;
+				if(i == 1) {
+					Iter_avg.sum(Iter_avg.diff);
+					Iter_avg.iters++;
+					Iter_avg.temp = Iter_avg.newA; 
+					Iter_avg.newA = Iter_avg.oldA; 
+					Iter_avg.oldA = Iter_avg.temp;
+				}
+				next;
+			}
+		}
+		long end_time = System.nanoTime();
+
+		double elapsed_time = (double)(end_time - start_time)/(Math.pow(10,9));
+		System.err.println("#iterations = "+Iter_avg.iters);	
+		System.err.println("Run time = "+elapsed_time);	
+
+	}
+}

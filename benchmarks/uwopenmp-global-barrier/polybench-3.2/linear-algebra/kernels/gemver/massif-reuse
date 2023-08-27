@@ -1,0 +1,778 @@
+--------------------------------------------------------------------------------
+Command:            ./transreuse
+Massif arguments:   --pages-as-heap=yes --max-snapshots=150
+ms_print arguments: massif.out.3706
+--------------------------------------------------------------------------------
+
+
+    MB
+591.2^                                                                    ::: 
+     |                                                                    :   
+     |          @::::::::::::::::::::::::::::::::::::::::::::::::::::::::::  #
+     |          @:                                                        :  #
+     |         :@:                                                        :  #
+     |         @@:                                                        :  #
+     |        @@@:                                                        :  #
+     |       :@@@:                                                        :  #
+     |       @@@@:                                                        :  #
+     |      @@@@@:                                                        :  #
+     |     :@@@@@:                                                        :  #
+     |     :@@@@@:                                                        :  #
+     |    ::@@@@@:                                                        :  #
+     |    ::@@@@@:                                                        :  #
+     |   :::@@@@@:                                                        :  #
+     |  @:::@@@@@:                                                        :  #
+     |  @:::@@@@@:                                                        :  #
+     | @@:::@@@@@:                                                        :  #
+     |:@@:::@@@@@:                                                        :  #
+     |@@@:::@@@@@:                                                        :  #
+   0 +----------------------------------------------------------------------->Mi
+     0                                                                   366.8
+
+Number of snapshots: 136
+ Detailed snapshots: [1, 3, 7, 12, 17, 22, 27, 32, 78, 88, 98, 108, 118, 128, 135 (peak)]
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  0              0           12,288           12,288             0            0
+  1        253,768       13,111,296       13,111,296             0            0
+100.00% (13,111,296B) (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+->97.31% (12,759,040B) 0x401B479: mmap (mmap.c:34)
+| ->96.44% (12,644,352B) 0x40068CB: _dl_map_object_from_fd (dl-map-segments.h:56)
+| | ->96.44% (12,644,352B) 0x4008C25: _dl_map_object (dl-load.c:2476)
+| |   ->80.38% (10,539,008B) 0x400DBA0: openaux (dl-deps.c:63)
+| |   | ->80.38% (10,539,008B) 0x4010562: _dl_catch_error (dl-error.c:187)
+| |   |   ->80.38% (10,539,008B) 0x400E1E0: _dl_map_object_deps (dl-deps.c:254)
+| |   |     ->80.38% (10,539,008B) 0x4003A27: dl_main (rtld.c:1647)
+| |   |       ->80.38% (10,539,008B) 0x4019630: _dl_sysdep_start (dl-sysdep.c:249)
+| |   |         ->80.38% (10,539,008B) 0x4001C28: _dl_start (rtld.c:323)
+| |   |           ->80.38% (10,539,008B) 0x4000C36: ??? (in /lib/x86_64-linux-gnu/ld-2.23.so)
+| |   |             
+| |   ->16.06% (2,105,344B) 0x4000EB3: map_doit (rtld.c:499)
+| |     ->16.06% (2,105,344B) 0x4010562: _dl_catch_error (dl-error.c:187)
+| |       ->16.06% (2,105,344B) 0x40020D4: handle_ld_preload (rtld.c:682)
+| |         ->16.06% (2,105,344B) 0x40039AD: dl_main (rtld.c:1539)
+| |           ->16.06% (2,105,344B) 0x4019630: _dl_sysdep_start (dl-sysdep.c:249)
+| |             ->16.06% (2,105,344B) 0x4001C28: _dl_start (rtld.c:323)
+| |               ->16.06% (2,105,344B) 0x4000C36: ??? (in /lib/x86_64-linux-gnu/ld-2.23.so)
+| |                 
+| ->00.87% (114,688B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->01.62% (212,992B) 0xFFFFFFFFFFFFFFFF: ???
+| 
+->01.06% (139,264B) 0x5165DD8: brk (brk.c:31)
+| ->01.06% (139,264B) 0x5165EB7: sbrk (sbrk.c:58)
+|   ->01.06% (139,264B) 0x50F08C7: __default_morecore (morecore.c:47)
+|     ->01.06% (139,264B) 0x50EA633: sysmalloc (malloc.c:2484)
+|       ->01.06% (139,264B) 0x50EB741: _int_malloc (malloc.c:3827)
+|         ->01.06% (139,264B) 0x50EE896: malloc_hook_ini (malloc.c:2913)
+|           ->01.06% (139,264B) 0x51311B8: opendir (opendir.c:247)
+|             ->01.06% (139,264B) 0x516EC04: get_nprocs_conf (getsysstats.c:238)
+|               ->01.06% (139,264B) 0x51374C6: sysconf (sysconf.c:627)
+|                 ->01.06% (139,264B) 0x4C3B62E: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+|                   ->01.06% (139,264B) 0x4C30DE0: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+|                     ->01.06% (139,264B) 0x40106B8: call_init.part.0 (dl-init.c:72)
+|                       ->01.06% (139,264B) 0x40107C9: _dl_init (dl-init.c:30)
+|                         ->01.06% (139,264B) 0x4000C68: ??? (in /lib/x86_64-linux-gnu/ld-2.23.so)
+|                           
+->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  2        823,810       19,988,480       19,988,480             0            0
+  3      1,714,391       29,556,736       29,556,736             0            0
+100.00% (29,556,736B) (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+->43.17% (12,759,040B) 0x401B479: mmap (mmap.c:34)
+| ->42.78% (12,644,352B) 0x40068CB: _dl_map_object_from_fd (dl-map-segments.h:56)
+| | ->42.78% (12,644,352B) 0x4008C25: _dl_map_object (dl-load.c:2476)
+| |   ->35.66% (10,539,008B) 0x400DBA0: openaux (dl-deps.c:63)
+| |   | ->35.66% (10,539,008B) 0x4010562: _dl_catch_error (dl-error.c:187)
+| |   |   ->35.66% (10,539,008B) 0x400E1E0: _dl_map_object_deps (dl-deps.c:254)
+| |   |     ->35.66% (10,539,008B) 0x4003A27: dl_main (rtld.c:1647)
+| |   |       ->35.66% (10,539,008B) 0x4019630: _dl_sysdep_start (dl-sysdep.c:249)
+| |   |         ->35.66% (10,539,008B) 0x4001C28: _dl_start (rtld.c:323)
+| |   |           ->35.66% (10,539,008B) 0x4000C36: ??? (in /lib/x86_64-linux-gnu/ld-2.23.so)
+| |   |             
+| |   ->07.12% (2,105,344B) 0x4000EB3: map_doit (rtld.c:499)
+| |     ->07.12% (2,105,344B) 0x4010562: _dl_catch_error (dl-error.c:187)
+| |       ->07.12% (2,105,344B) 0x40020D4: handle_ld_preload (rtld.c:682)
+| |         ->07.12% (2,105,344B) 0x40039AD: dl_main (rtld.c:1539)
+| |           ->07.12% (2,105,344B) 0x4019630: _dl_sysdep_start (dl-sysdep.c:249)
+| |             ->07.12% (2,105,344B) 0x4001C28: _dl_start (rtld.c:323)
+| |               ->07.12% (2,105,344B) 0x4000C36: ??? (in /lib/x86_64-linux-gnu/ld-2.23.so)
+| |                 
+| ->00.39% (114,688B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->28.38% (8,388,608B) 0x516A679: mmap (mmap.c:34)
+| ->28.38% (8,388,608B) 0x50EA7AD: sysmalloc (malloc.c:2517)
+|   ->28.38% (8,388,608B) 0x50EB741: _int_malloc (malloc.c:3827)
+|     ->28.38% (8,388,608B) 0x50EDDC8: calloc (malloc.c:3236)
+|       ->28.38% (8,388,608B) 0x400AE4: main (in /home/anchu/raghesh/uw-openmp/benchmarks/uwopenmp-global-barrier/polybench-3.2/linear-algebra/kernels/gemver/transreuse)
+|         
+->27.73% (8,196,096B) 0x5165DD8: brk (brk.c:31)
+| ->27.73% (8,196,096B) 0x5165EB7: sbrk (sbrk.c:58)
+|   ->27.73% (8,196,096B) 0x50F08C7: __default_morecore (morecore.c:47)
+|     ->27.73% (8,196,096B) 0x50EA633: sysmalloc (malloc.c:2484)
+|       ->27.73% (8,196,096B) 0x50EB741: _int_malloc (malloc.c:3827)
+|         ->27.27% (8,060,928B) 0x50EDDC8: calloc (malloc.c:3236)
+|         | ->27.27% (8,060,928B) 0x400AE4: main (in /home/anchu/raghesh/uw-openmp/benchmarks/uwopenmp-global-barrier/polybench-3.2/linear-algebra/kernels/gemver/transreuse)
+|         |   
+|         ->00.46% (135,168B) in 1+ places, all below ms_print's threshold (01.00%)
+|         
+->00.72% (212,992B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  4      2,608,111       37,945,344       37,945,344             0            0
+  5      3,054,971       42,139,648       42,139,648             0            0
+  6      3,501,831       46,333,952       46,333,952             0            0
+  7      3,948,691       50,528,256       50,528,256             0            0
+100.00% (50,528,256B) (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+->58.11% (29,360,128B) 0x516A679: mmap (mmap.c:34)
+| ->58.11% (29,360,128B) 0x50EA7AD: sysmalloc (malloc.c:2517)
+|   ->58.11% (29,360,128B) 0x50EB741: _int_malloc (malloc.c:3827)
+|     ->58.11% (29,360,128B) 0x50EDDC8: calloc (malloc.c:3236)
+|       ->58.11% (29,360,128B) 0x400AE4: main (in /home/anchu/raghesh/uw-openmp/benchmarks/uwopenmp-global-barrier/polybench-3.2/linear-algebra/kernels/gemver/transreuse)
+|         
+->25.25% (12,759,040B) 0x401B479: mmap (mmap.c:34)
+| ->25.02% (12,644,352B) 0x40068CB: _dl_map_object_from_fd (dl-map-segments.h:56)
+| | ->25.02% (12,644,352B) 0x4008C25: _dl_map_object (dl-load.c:2476)
+| |   ->20.86% (10,539,008B) 0x400DBA0: openaux (dl-deps.c:63)
+| |   | ->20.86% (10,539,008B) 0x4010562: _dl_catch_error (dl-error.c:187)
+| |   |   ->20.86% (10,539,008B) 0x400E1E0: _dl_map_object_deps (dl-deps.c:254)
+| |   |     ->20.86% (10,539,008B) 0x4003A27: dl_main (rtld.c:1647)
+| |   |       ->20.86% (10,539,008B) 0x4019630: _dl_sysdep_start (dl-sysdep.c:249)
+| |   |         ->20.86% (10,539,008B) 0x4001C28: _dl_start (rtld.c:323)
+| |   |           ->20.86% (10,539,008B) 0x4000C36: ??? (in /lib/x86_64-linux-gnu/ld-2.23.so)
+| |   |             
+| |   ->04.17% (2,105,344B) 0x4000EB3: map_doit (rtld.c:499)
+| |     ->04.17% (2,105,344B) 0x4010562: _dl_catch_error (dl-error.c:187)
+| |       ->04.17% (2,105,344B) 0x40020D4: handle_ld_preload (rtld.c:682)
+| |         ->04.17% (2,105,344B) 0x40039AD: dl_main (rtld.c:1539)
+| |           ->04.17% (2,105,344B) 0x4019630: _dl_sysdep_start (dl-sysdep.c:249)
+| |             ->04.17% (2,105,344B) 0x4001C28: _dl_start (rtld.c:323)
+| |               ->04.17% (2,105,344B) 0x4000C36: ??? (in /lib/x86_64-linux-gnu/ld-2.23.so)
+| |                 
+| ->00.23% (114,688B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->16.22% (8,196,096B) 0x5165DD8: brk (brk.c:31)
+| ->16.22% (8,196,096B) 0x5165EB7: sbrk (sbrk.c:58)
+|   ->16.22% (8,196,096B) 0x50F08C7: __default_morecore (morecore.c:47)
+|     ->16.22% (8,196,096B) 0x50EA633: sysmalloc (malloc.c:2484)
+|       ->16.22% (8,196,096B) 0x50EB741: _int_malloc (malloc.c:3827)
+|         ->15.95% (8,060,928B) 0x50EDDC8: calloc (malloc.c:3236)
+|         | ->15.95% (8,060,928B) 0x400AE4: main (in /home/anchu/raghesh/uw-openmp/benchmarks/uwopenmp-global-barrier/polybench-3.2/linear-algebra/kernels/gemver/transreuse)
+|         |   
+|         ->00.27% (135,168B) in 1+ places, all below ms_print's threshold (01.00%)
+|         
+->00.42% (212,992B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  8      4,395,551       54,722,560       54,722,560             0            0
+  9      4,842,411       58,916,864       58,916,864             0            0
+ 10      5,289,271       63,111,168       63,111,168             0            0
+ 11      5,736,131       67,305,472       67,305,472             0            0
+ 12      6,182,991       71,499,776       71,499,776             0            0
+100.00% (71,499,776B) (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+->70.39% (50,331,648B) 0x516A679: mmap (mmap.c:34)
+| ->70.39% (50,331,648B) 0x50EA7AD: sysmalloc (malloc.c:2517)
+|   ->70.39% (50,331,648B) 0x50EB741: _int_malloc (malloc.c:3827)
+|     ->70.39% (50,331,648B) 0x50EDDC8: calloc (malloc.c:3236)
+|       ->70.39% (50,331,648B) 0x400AE4: main (in /home/anchu/raghesh/uw-openmp/benchmarks/uwopenmp-global-barrier/polybench-3.2/linear-algebra/kernels/gemver/transreuse)
+|         
+->17.84% (12,759,040B) 0x401B479: mmap (mmap.c:34)
+| ->17.68% (12,644,352B) 0x40068CB: _dl_map_object_from_fd (dl-map-segments.h:56)
+| | ->17.68% (12,644,352B) 0x4008C25: _dl_map_object (dl-load.c:2476)
+| |   ->14.74% (10,539,008B) 0x400DBA0: openaux (dl-deps.c:63)
+| |   | ->14.74% (10,539,008B) 0x4010562: _dl_catch_error (dl-error.c:187)
+| |   |   ->14.74% (10,539,008B) 0x400E1E0: _dl_map_object_deps (dl-deps.c:254)
+| |   |     ->14.74% (10,539,008B) 0x4003A27: dl_main (rtld.c:1647)
+| |   |       ->14.74% (10,539,008B) 0x4019630: _dl_sysdep_start (dl-sysdep.c:249)
+| |   |         ->14.74% (10,539,008B) 0x4001C28: _dl_start (rtld.c:323)
+| |   |           ->14.74% (10,539,008B) 0x4000C36: ??? (in /lib/x86_64-linux-gnu/ld-2.23.so)
+| |   |             
+| |   ->02.94% (2,105,344B) 0x4000EB3: map_doit (rtld.c:499)
+| |     ->02.94% (2,105,344B) 0x4010562: _dl_catch_error (dl-error.c:187)
+| |       ->02.94% (2,105,344B) 0x40020D4: handle_ld_preload (rtld.c:682)
+| |         ->02.94% (2,105,344B) 0x40039AD: dl_main (rtld.c:1539)
+| |           ->02.94% (2,105,344B) 0x4019630: _dl_sysdep_start (dl-sysdep.c:249)
+| |             ->02.94% (2,105,344B) 0x4001C28: _dl_start (rtld.c:323)
+| |               ->02.94% (2,105,344B) 0x4000C36: ??? (in /lib/x86_64-linux-gnu/ld-2.23.so)
+| |                 
+| ->00.16% (114,688B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->11.46% (8,196,096B) 0x5165DD8: brk (brk.c:31)
+| ->11.46% (8,196,096B) 0x5165EB7: sbrk (sbrk.c:58)
+|   ->11.46% (8,196,096B) 0x50F08C7: __default_morecore (morecore.c:47)
+|     ->11.46% (8,196,096B) 0x50EA633: sysmalloc (malloc.c:2484)
+|       ->11.46% (8,196,096B) 0x50EB741: _int_malloc (malloc.c:3827)
+|         ->11.27% (8,060,928B) 0x50EDDC8: calloc (malloc.c:3236)
+|         | ->11.27% (8,060,928B) 0x400AE4: main (in /home/anchu/raghesh/uw-openmp/benchmarks/uwopenmp-global-barrier/polybench-3.2/linear-algebra/kernels/gemver/transreuse)
+|         |   
+|         ->00.19% (135,168B) in 1+ places, all below ms_print's threshold (01.00%)
+|         
+->00.30% (212,992B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 13      6,629,851       75,694,080       75,694,080             0            0
+ 14      7,076,711       79,888,384       79,888,384             0            0
+ 15      7,523,571       84,082,688       84,082,688             0            0
+ 16      7,970,431       88,276,992       88,276,992             0            0
+ 17      8,417,291       92,471,296       92,471,296             0            0
+100.00% (92,471,296B) (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+->77.11% (71,303,168B) 0x516A679: mmap (mmap.c:34)
+| ->77.11% (71,303,168B) 0x50EA7AD: sysmalloc (malloc.c:2517)
+|   ->77.11% (71,303,168B) 0x50EB741: _int_malloc (malloc.c:3827)
+|     ->77.11% (71,303,168B) 0x50EDDC8: calloc (malloc.c:3236)
+|       ->77.11% (71,303,168B) 0x400AE4: main (in /home/anchu/raghesh/uw-openmp/benchmarks/uwopenmp-global-barrier/polybench-3.2/linear-algebra/kernels/gemver/transreuse)
+|         
+->13.80% (12,759,040B) 0x401B479: mmap (mmap.c:34)
+| ->13.67% (12,644,352B) 0x40068CB: _dl_map_object_from_fd (dl-map-segments.h:56)
+| | ->13.67% (12,644,352B) 0x4008C25: _dl_map_object (dl-load.c:2476)
+| |   ->11.40% (10,539,008B) 0x400DBA0: openaux (dl-deps.c:63)
+| |   | ->11.40% (10,539,008B) 0x4010562: _dl_catch_error (dl-error.c:187)
+| |   |   ->11.40% (10,539,008B) 0x400E1E0: _dl_map_object_deps (dl-deps.c:254)
+| |   |     ->11.40% (10,539,008B) 0x4003A27: dl_main (rtld.c:1647)
+| |   |       ->11.40% (10,539,008B) 0x4019630: _dl_sysdep_start (dl-sysdep.c:249)
+| |   |         ->11.40% (10,539,008B) 0x4001C28: _dl_start (rtld.c:323)
+| |   |           ->11.40% (10,539,008B) 0x4000C36: ??? (in /lib/x86_64-linux-gnu/ld-2.23.so)
+| |   |             
+| |   ->02.28% (2,105,344B) 0x4000EB3: map_doit (rtld.c:499)
+| |     ->02.28% (2,105,344B) 0x4010562: _dl_catch_error (dl-error.c:187)
+| |       ->02.28% (2,105,344B) 0x40020D4: handle_ld_preload (rtld.c:682)
+| |         ->02.28% (2,105,344B) 0x40039AD: dl_main (rtld.c:1539)
+| |           ->02.28% (2,105,344B) 0x4019630: _dl_sysdep_start (dl-sysdep.c:249)
+| |             ->02.28% (2,105,344B) 0x4001C28: _dl_start (rtld.c:323)
+| |               ->02.28% (2,105,344B) 0x4000C36: ??? (in /lib/x86_64-linux-gnu/ld-2.23.so)
+| |                 
+| ->00.12% (114,688B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->08.86% (8,196,096B) 0x5165DD8: brk (brk.c:31)
+| ->08.86% (8,196,096B) 0x5165EB7: sbrk (sbrk.c:58)
+|   ->08.86% (8,196,096B) 0x50F08C7: __default_morecore (morecore.c:47)
+|     ->08.86% (8,196,096B) 0x50EA633: sysmalloc (malloc.c:2484)
+|       ->08.86% (8,196,096B) 0x50EB741: _int_malloc (malloc.c:3827)
+|         ->08.72% (8,060,928B) 0x50EDDC8: calloc (malloc.c:3236)
+|         | ->08.72% (8,060,928B) 0x400AE4: main (in /home/anchu/raghesh/uw-openmp/benchmarks/uwopenmp-global-barrier/polybench-3.2/linear-algebra/kernels/gemver/transreuse)
+|         |   
+|         ->00.15% (135,168B) in 1+ places, all below ms_print's threshold (01.00%)
+|         
+->00.23% (212,992B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 18      8,864,151       96,665,600       96,665,600             0            0
+ 19      9,311,011      100,859,904      100,859,904             0            0
+ 20      9,757,871      105,054,208      105,054,208             0            0
+ 21     10,204,731      109,248,512      109,248,512             0            0
+ 22     10,651,591      113,442,816      113,442,816             0            0
+100.00% (113,442,816B) (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+->81.34% (92,274,688B) 0x516A679: mmap (mmap.c:34)
+| ->81.34% (92,274,688B) 0x50EA7AD: sysmalloc (malloc.c:2517)
+|   ->81.34% (92,274,688B) 0x50EB741: _int_malloc (malloc.c:3827)
+|     ->81.34% (92,274,688B) 0x50EDDC8: calloc (malloc.c:3236)
+|       ->81.34% (92,274,688B) 0x400AE4: main (in /home/anchu/raghesh/uw-openmp/benchmarks/uwopenmp-global-barrier/polybench-3.2/linear-algebra/kernels/gemver/transreuse)
+|         
+->11.25% (12,759,040B) 0x401B479: mmap (mmap.c:34)
+| ->11.15% (12,644,352B) 0x40068CB: _dl_map_object_from_fd (dl-map-segments.h:56)
+| | ->11.15% (12,644,352B) 0x4008C25: _dl_map_object (dl-load.c:2476)
+| |   ->09.29% (10,539,008B) 0x400DBA0: openaux (dl-deps.c:63)
+| |   | ->09.29% (10,539,008B) 0x4010562: _dl_catch_error (dl-error.c:187)
+| |   |   ->09.29% (10,539,008B) 0x400E1E0: _dl_map_object_deps (dl-deps.c:254)
+| |   |     ->09.29% (10,539,008B) 0x4003A27: dl_main (rtld.c:1647)
+| |   |       ->09.29% (10,539,008B) 0x4019630: _dl_sysdep_start (dl-sysdep.c:249)
+| |   |         ->09.29% (10,539,008B) 0x4001C28: _dl_start (rtld.c:323)
+| |   |           ->09.29% (10,539,008B) 0x4000C36: ??? (in /lib/x86_64-linux-gnu/ld-2.23.so)
+| |   |             
+| |   ->01.86% (2,105,344B) 0x4000EB3: map_doit (rtld.c:499)
+| |     ->01.86% (2,105,344B) 0x4010562: _dl_catch_error (dl-error.c:187)
+| |       ->01.86% (2,105,344B) 0x40020D4: handle_ld_preload (rtld.c:682)
+| |         ->01.86% (2,105,344B) 0x40039AD: dl_main (rtld.c:1539)
+| |           ->01.86% (2,105,344B) 0x4019630: _dl_sysdep_start (dl-sysdep.c:249)
+| |             ->01.86% (2,105,344B) 0x4001C28: _dl_start (rtld.c:323)
+| |               ->01.86% (2,105,344B) 0x4000C36: ??? (in /lib/x86_64-linux-gnu/ld-2.23.so)
+| |                 
+| ->00.10% (114,688B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->07.22% (8,196,096B) 0x5165DD8: brk (brk.c:31)
+| ->07.22% (8,196,096B) 0x5165EB7: sbrk (sbrk.c:58)
+|   ->07.22% (8,196,096B) 0x50F08C7: __default_morecore (morecore.c:47)
+|     ->07.22% (8,196,096B) 0x50EA633: sysmalloc (malloc.c:2484)
+|       ->07.22% (8,196,096B) 0x50EB741: _int_malloc (malloc.c:3827)
+|         ->07.11% (8,060,928B) 0x50EDDC8: calloc (malloc.c:3236)
+|         | ->07.11% (8,060,928B) 0x400AE4: main (in /home/anchu/raghesh/uw-openmp/benchmarks/uwopenmp-global-barrier/polybench-3.2/linear-algebra/kernels/gemver/transreuse)
+|         |   
+|         ->00.12% (135,168B) in 1+ places, all below ms_print's threshold (01.00%)
+|         
+->00.19% (212,992B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 23     11,098,451      117,637,120      117,637,120             0            0
+ 24     11,545,311      121,831,424      121,831,424             0            0
+ 25     11,992,171      126,025,728      126,025,728             0            0
+ 26     12,439,031      130,220,032      130,220,032             0            0
+ 27     12,885,891      134,414,336      134,414,336             0            0
+100.00% (134,414,336B) (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+->84.25% (113,246,208B) 0x516A679: mmap (mmap.c:34)
+| ->84.25% (113,246,208B) 0x50EA7AD: sysmalloc (malloc.c:2517)
+|   ->84.25% (113,246,208B) 0x50EB741: _int_malloc (malloc.c:3827)
+|     ->84.25% (113,246,208B) 0x50EDDC8: calloc (malloc.c:3236)
+|       ->84.25% (113,246,208B) 0x400AE4: main (in /home/anchu/raghesh/uw-openmp/benchmarks/uwopenmp-global-barrier/polybench-3.2/linear-algebra/kernels/gemver/transreuse)
+|         
+->09.49% (12,759,040B) 0x401B479: mmap (mmap.c:34)
+| ->09.41% (12,644,352B) 0x40068CB: _dl_map_object_from_fd (dl-map-segments.h:56)
+| | ->09.41% (12,644,352B) 0x4008C25: _dl_map_object (dl-load.c:2476)
+| |   ->07.84% (10,539,008B) 0x400DBA0: openaux (dl-deps.c:63)
+| |   | ->07.84% (10,539,008B) 0x4010562: _dl_catch_error (dl-error.c:187)
+| |   |   ->07.84% (10,539,008B) 0x400E1E0: _dl_map_object_deps (dl-deps.c:254)
+| |   |     ->07.84% (10,539,008B) 0x4003A27: dl_main (rtld.c:1647)
+| |   |       ->07.84% (10,539,008B) 0x4019630: _dl_sysdep_start (dl-sysdep.c:249)
+| |   |         ->07.84% (10,539,008B) 0x4001C28: _dl_start (rtld.c:323)
+| |   |           ->07.84% (10,539,008B) 0x4000C36: ??? (in /lib/x86_64-linux-gnu/ld-2.23.so)
+| |   |             
+| |   ->01.57% (2,105,344B) 0x4000EB3: map_doit (rtld.c:499)
+| |     ->01.57% (2,105,344B) 0x4010562: _dl_catch_error (dl-error.c:187)
+| |       ->01.57% (2,105,344B) 0x40020D4: handle_ld_preload (rtld.c:682)
+| |         ->01.57% (2,105,344B) 0x40039AD: dl_main (rtld.c:1539)
+| |           ->01.57% (2,105,344B) 0x4019630: _dl_sysdep_start (dl-sysdep.c:249)
+| |             ->01.57% (2,105,344B) 0x4001C28: _dl_start (rtld.c:323)
+| |               ->01.57% (2,105,344B) 0x4000C36: ??? (in /lib/x86_64-linux-gnu/ld-2.23.so)
+| |                 
+| ->00.09% (114,688B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->06.10% (8,196,096B) 0x5165DD8: brk (brk.c:31)
+| ->06.10% (8,196,096B) 0x5165EB7: sbrk (sbrk.c:58)
+|   ->06.10% (8,196,096B) 0x50F08C7: __default_morecore (morecore.c:47)
+|     ->06.10% (8,196,096B) 0x50EA633: sysmalloc (malloc.c:2484)
+|       ->06.10% (8,196,096B) 0x50EB741: _int_malloc (malloc.c:3827)
+|         ->06.00% (8,060,928B) 0x50EDDC8: calloc (malloc.c:3236)
+|         | ->06.00% (8,060,928B) 0x400AE4: main (in /home/anchu/raghesh/uw-openmp/benchmarks/uwopenmp-global-barrier/polybench-3.2/linear-algebra/kernels/gemver/transreuse)
+|         |   
+|         ->00.10% (135,168B) in 1+ places, all below ms_print's threshold (01.00%)
+|         
+->00.16% (212,992B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 28     13,332,751      138,608,640      138,608,640             0            0
+ 29     13,779,611      142,802,944      142,802,944             0            0
+ 30     14,226,471      146,997,248      146,997,248             0            0
+ 31     14,673,331      151,191,552      151,191,552             0            0
+ 32     15,120,191      155,385,856      155,385,856             0            0
+100.00% (155,385,856B) (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+->86.38% (134,217,728B) 0x516A679: mmap (mmap.c:34)
+| ->86.38% (134,217,728B) 0x50EA7AD: sysmalloc (malloc.c:2517)
+|   ->86.38% (134,217,728B) 0x50EB741: _int_malloc (malloc.c:3827)
+|     ->86.38% (134,217,728B) 0x50EDDC8: calloc (malloc.c:3236)
+|       ->86.38% (134,217,728B) 0x400AE4: main (in /home/anchu/raghesh/uw-openmp/benchmarks/uwopenmp-global-barrier/polybench-3.2/linear-algebra/kernels/gemver/transreuse)
+|         
+->08.21% (12,759,040B) 0x401B479: mmap (mmap.c:34)
+| ->08.14% (12,644,352B) 0x40068CB: _dl_map_object_from_fd (dl-map-segments.h:56)
+| | ->08.14% (12,644,352B) 0x4008C25: _dl_map_object (dl-load.c:2476)
+| |   ->06.78% (10,539,008B) 0x400DBA0: openaux (dl-deps.c:63)
+| |   | ->06.78% (10,539,008B) 0x4010562: _dl_catch_error (dl-error.c:187)
+| |   |   ->06.78% (10,539,008B) 0x400E1E0: _dl_map_object_deps (dl-deps.c:254)
+| |   |     ->06.78% (10,539,008B) 0x4003A27: dl_main (rtld.c:1647)
+| |   |       ->06.78% (10,539,008B) 0x4019630: _dl_sysdep_start (dl-sysdep.c:249)
+| |   |         ->06.78% (10,539,008B) 0x4001C28: _dl_start (rtld.c:323)
+| |   |           ->06.78% (10,539,008B) 0x4000C36: ??? (in /lib/x86_64-linux-gnu/ld-2.23.so)
+| |   |             
+| |   ->01.35% (2,105,344B) 0x4000EB3: map_doit (rtld.c:499)
+| |     ->01.35% (2,105,344B) 0x4010562: _dl_catch_error (dl-error.c:187)
+| |       ->01.35% (2,105,344B) 0x40020D4: handle_ld_preload (rtld.c:682)
+| |         ->01.35% (2,105,344B) 0x40039AD: dl_main (rtld.c:1539)
+| |           ->01.35% (2,105,344B) 0x4019630: _dl_sysdep_start (dl-sysdep.c:249)
+| |             ->01.35% (2,105,344B) 0x4001C28: _dl_start (rtld.c:323)
+| |               ->01.35% (2,105,344B) 0x4000C36: ??? (in /lib/x86_64-linux-gnu/ld-2.23.so)
+| |                 
+| ->00.07% (114,688B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->05.27% (8,196,096B) 0x5165DD8: brk (brk.c:31)
+| ->05.27% (8,196,096B) 0x5165EB7: sbrk (sbrk.c:58)
+|   ->05.27% (8,196,096B) 0x50F08C7: __default_morecore (morecore.c:47)
+|     ->05.27% (8,196,096B) 0x50EA633: sysmalloc (malloc.c:2484)
+|       ->05.27% (8,196,096B) 0x50EB741: _int_malloc (malloc.c:3827)
+|         ->05.19% (8,060,928B) 0x50EDDC8: calloc (malloc.c:3236)
+|         | ->05.19% (8,060,928B) 0x400AE4: main (in /home/anchu/raghesh/uw-openmp/benchmarks/uwopenmp-global-barrier/polybench-3.2/linear-algebra/kernels/gemver/transreuse)
+|         |   
+|         ->00.09% (135,168B) in 1+ places, all below ms_print's threshold (01.00%)
+|         
+->00.14% (212,992B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 33     15,567,051      159,580,160      159,580,160             0            0
+ 34     16,013,911      163,774,464      163,774,464             0            0
+ 35     16,460,771      167,968,768      167,968,768             0            0
+ 36     16,907,631      172,163,072      172,163,072             0            0
+ 37     17,466,206      177,405,952      177,405,952             0            0
+ 38     17,913,066      181,600,256      181,600,256             0            0
+ 39     18,359,926      185,794,560      185,794,560             0            0
+ 40     18,806,786      189,988,864      189,988,864             0            0
+ 41     19,253,646      194,183,168      194,183,168             0            0
+ 42     19,700,506      198,377,472      198,377,472             0            0
+ 43     20,147,366      202,571,776      202,571,776             0            0
+ 44     20,594,226      206,766,080      206,766,080             0            0
+ 45     21,041,086      210,960,384      210,960,384             0            0
+ 46     21,487,946      215,154,688      215,154,688             0            0
+ 47     21,934,806      219,348,992      219,348,992             0            0
+ 48     22,381,666      223,543,296      223,543,296             0            0
+ 49     22,828,526      227,737,600      227,737,600             0            0
+ 50     23,275,386      231,931,904      231,931,904             0            0
+ 51     23,722,246      236,126,208      236,126,208             0            0
+ 52     24,169,106      240,320,512      240,320,512             0            0
+ 53     24,615,966      244,514,816      244,514,816             0            0
+ 54     25,062,826      248,709,120      248,709,120             0            0
+ 55     25,509,686      252,903,424      252,903,424             0            0
+ 56     25,956,546      257,097,728      257,097,728             0            0
+ 57     26,403,406      261,292,032      261,292,032             0            0
+ 58     26,850,266      265,486,336      265,486,336             0            0
+ 59     27,297,126      269,680,640      269,680,640             0            0
+ 60     27,743,986      273,874,944      273,874,944             0            0
+ 61     28,190,846      278,069,248      278,069,248             0            0
+ 62     28,637,706      282,263,552      282,263,552             0            0
+ 63     29,084,566      286,457,856      286,457,856             0            0
+ 64     29,531,426      290,652,160      290,652,160             0            0
+ 65     29,978,286      294,846,464      294,846,464             0            0
+ 66     30,425,146      299,040,768      299,040,768             0            0
+ 67     30,872,006      303,235,072      303,235,072             0            0
+ 68     31,318,866      307,429,376      307,429,376             0            0
+ 69     31,765,726      311,623,680      311,623,680             0            0
+ 70     32,212,586      315,817,984      315,817,984             0            0
+ 71     32,659,446      320,012,288      320,012,288             0            0
+ 72     33,106,306      324,206,592      324,206,592             0            0
+ 73     33,553,166      328,400,896      328,400,896             0            0
+ 74     34,223,456      334,692,352      334,692,352             0            0
+ 75     34,670,316      338,886,656      338,886,656             0            0
+ 76     35,117,176      343,080,960      343,080,960             0            0
+ 77     35,564,036      347,275,264      347,275,264             0            0
+ 78     36,010,896      351,469,568      351,469,568             0            0
+100.00% (351,469,568B) (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+->93.98% (330,301,440B) 0x516A679: mmap (mmap.c:34)
+| ->93.98% (330,301,440B) 0x50EA7AD: sysmalloc (malloc.c:2517)
+|   ->93.98% (330,301,440B) 0x50EB741: _int_malloc (malloc.c:3827)
+|     ->93.98% (330,301,440B) 0x50EDDC8: calloc (malloc.c:3236)
+|       ->93.98% (330,301,440B) 0x400AE4: main (in /home/anchu/raghesh/uw-openmp/benchmarks/uwopenmp-global-barrier/polybench-3.2/linear-algebra/kernels/gemver/transreuse)
+|         
+->03.63% (12,759,040B) 0x401B479: mmap (mmap.c:34)
+| ->03.60% (12,644,352B) 0x40068CB: _dl_map_object_from_fd (dl-map-segments.h:56)
+| | ->03.60% (12,644,352B) 0x4008C25: _dl_map_object (dl-load.c:2476)
+| |   ->03.00% (10,539,008B) 0x400DBA0: openaux (dl-deps.c:63)
+| |   | ->03.00% (10,539,008B) 0x4010562: _dl_catch_error (dl-error.c:187)
+| |   |   ->03.00% (10,539,008B) 0x400E1E0: _dl_map_object_deps (dl-deps.c:254)
+| |   |     ->03.00% (10,539,008B) 0x4003A27: dl_main (rtld.c:1647)
+| |   |       ->03.00% (10,539,008B) 0x4019630: _dl_sysdep_start (dl-sysdep.c:249)
+| |   |         ->03.00% (10,539,008B) 0x4001C28: _dl_start (rtld.c:323)
+| |   |           ->03.00% (10,539,008B) 0x4000C36: ??? (in /lib/x86_64-linux-gnu/ld-2.23.so)
+| |   |             
+| |   ->00.60% (2,105,344B) in 1+ places, all below ms_print's threshold (01.00%)
+| |   
+| ->00.03% (114,688B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->02.33% (8,196,096B) 0x5165DD8: brk (brk.c:31)
+| ->02.33% (8,196,096B) 0x5165EB7: sbrk (sbrk.c:58)
+|   ->02.33% (8,196,096B) 0x50F08C7: __default_morecore (morecore.c:47)
+|     ->02.33% (8,196,096B) 0x50EA633: sysmalloc (malloc.c:2484)
+|       ->02.33% (8,196,096B) 0x50EB741: _int_malloc (malloc.c:3827)
+|         ->02.29% (8,060,928B) 0x50EDDC8: calloc (malloc.c:3236)
+|         | ->02.29% (8,060,928B) 0x400AE4: main (in /home/anchu/raghesh/uw-openmp/benchmarks/uwopenmp-global-barrier/polybench-3.2/linear-algebra/kernels/gemver/transreuse)
+|         |   
+|         ->00.04% (135,168B) in 1+ places, all below ms_print's threshold (01.00%)
+|         
+->00.06% (212,992B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 79     36,457,756      355,663,872      355,663,872             0            0
+ 80     36,904,616      359,858,176      359,858,176             0            0
+ 81     37,351,476      364,052,480      364,052,480             0            0
+ 82     37,798,336      368,246,784      368,246,784             0            0
+ 83     38,245,196      372,441,088      372,441,088             0            0
+ 84     38,692,056      376,635,392      376,635,392             0            0
+ 85     39,138,916      380,829,696      380,829,696             0            0
+ 86     39,585,776      385,024,000      385,024,000             0            0
+ 87     40,032,636      389,218,304      389,218,304             0            0
+ 88     40,479,496      393,412,608      393,412,608             0            0
+100.00% (393,412,608B) (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+->94.62% (372,244,480B) 0x516A679: mmap (mmap.c:34)
+| ->94.62% (372,244,480B) 0x50EA7AD: sysmalloc (malloc.c:2517)
+|   ->94.62% (372,244,480B) 0x50EB741: _int_malloc (malloc.c:3827)
+|     ->94.62% (372,244,480B) 0x50EDDC8: calloc (malloc.c:3236)
+|       ->94.62% (372,244,480B) 0x400AE4: main (in /home/anchu/raghesh/uw-openmp/benchmarks/uwopenmp-global-barrier/polybench-3.2/linear-algebra/kernels/gemver/transreuse)
+|         
+->03.24% (12,759,040B) 0x401B479: mmap (mmap.c:34)
+| ->03.21% (12,644,352B) 0x40068CB: _dl_map_object_from_fd (dl-map-segments.h:56)
+| | ->03.21% (12,644,352B) 0x4008C25: _dl_map_object (dl-load.c:2476)
+| |   ->02.68% (10,539,008B) 0x400DBA0: openaux (dl-deps.c:63)
+| |   | ->02.68% (10,539,008B) 0x4010562: _dl_catch_error (dl-error.c:187)
+| |   |   ->02.68% (10,539,008B) 0x400E1E0: _dl_map_object_deps (dl-deps.c:254)
+| |   |     ->02.68% (10,539,008B) 0x4003A27: dl_main (rtld.c:1647)
+| |   |       ->02.68% (10,539,008B) 0x4019630: _dl_sysdep_start (dl-sysdep.c:249)
+| |   |         ->02.68% (10,539,008B) 0x4001C28: _dl_start (rtld.c:323)
+| |   |           ->02.68% (10,539,008B) 0x4000C36: ??? (in /lib/x86_64-linux-gnu/ld-2.23.so)
+| |   |             
+| |   ->00.54% (2,105,344B) in 1+ places, all below ms_print's threshold (01.00%)
+| |   
+| ->00.03% (114,688B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->02.08% (8,196,096B) 0x5165DD8: brk (brk.c:31)
+| ->02.08% (8,196,096B) 0x5165EB7: sbrk (sbrk.c:58)
+|   ->02.08% (8,196,096B) 0x50F08C7: __default_morecore (morecore.c:47)
+|     ->02.08% (8,196,096B) 0x50EA633: sysmalloc (malloc.c:2484)
+|       ->02.08% (8,196,096B) 0x50EB741: _int_malloc (malloc.c:3827)
+|         ->02.05% (8,060,928B) 0x50EDDC8: calloc (malloc.c:3236)
+|         | ->02.05% (8,060,928B) 0x400AE4: main (in /home/anchu/raghesh/uw-openmp/benchmarks/uwopenmp-global-barrier/polybench-3.2/linear-algebra/kernels/gemver/transreuse)
+|         |   
+|         ->00.03% (135,168B) in 1+ places, all below ms_print's threshold (01.00%)
+|         
+->00.05% (212,992B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 89     40,926,356      397,606,912      397,606,912             0            0
+ 90     41,373,216      401,801,216      401,801,216             0            0
+ 91     41,820,076      405,995,520      405,995,520             0            0
+ 92     42,266,936      410,189,824      410,189,824             0            0
+ 93     42,713,796      414,384,128      414,384,128             0            0
+ 94     43,160,656      418,578,432      418,578,432             0            0
+ 95     43,607,516      422,772,736      422,772,736             0            0
+ 96     44,054,376      426,967,040      426,967,040             0            0
+ 97     44,501,236      431,161,344      431,161,344             0            0
+ 98     44,948,096      435,355,648      435,355,648             0            0
+100.00% (435,355,648B) (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+->95.14% (414,187,520B) 0x516A679: mmap (mmap.c:34)
+| ->95.14% (414,187,520B) 0x50EA7AD: sysmalloc (malloc.c:2517)
+|   ->95.14% (414,187,520B) 0x50EB741: _int_malloc (malloc.c:3827)
+|     ->95.14% (414,187,520B) 0x50EDDC8: calloc (malloc.c:3236)
+|       ->95.14% (414,187,520B) 0x400AE4: main (in /home/anchu/raghesh/uw-openmp/benchmarks/uwopenmp-global-barrier/polybench-3.2/linear-algebra/kernels/gemver/transreuse)
+|         
+->02.93% (12,759,040B) 0x401B479: mmap (mmap.c:34)
+| ->02.90% (12,644,352B) 0x40068CB: _dl_map_object_from_fd (dl-map-segments.h:56)
+| | ->02.90% (12,644,352B) 0x4008C25: _dl_map_object (dl-load.c:2476)
+| |   ->02.42% (10,539,008B) 0x400DBA0: openaux (dl-deps.c:63)
+| |   | ->02.42% (10,539,008B) 0x4010562: _dl_catch_error (dl-error.c:187)
+| |   |   ->02.42% (10,539,008B) 0x400E1E0: _dl_map_object_deps (dl-deps.c:254)
+| |   |     ->02.42% (10,539,008B) 0x4003A27: dl_main (rtld.c:1647)
+| |   |       ->02.42% (10,539,008B) 0x4019630: _dl_sysdep_start (dl-sysdep.c:249)
+| |   |         ->02.42% (10,539,008B) 0x4001C28: _dl_start (rtld.c:323)
+| |   |           ->02.42% (10,539,008B) 0x4000C36: ??? (in /lib/x86_64-linux-gnu/ld-2.23.so)
+| |   |             
+| |   ->00.48% (2,105,344B) in 1+ places, all below ms_print's threshold (01.00%)
+| |   
+| ->00.03% (114,688B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->01.88% (8,196,096B) 0x5165DD8: brk (brk.c:31)
+| ->01.88% (8,196,096B) 0x5165EB7: sbrk (sbrk.c:58)
+|   ->01.88% (8,196,096B) 0x50F08C7: __default_morecore (morecore.c:47)
+|     ->01.88% (8,196,096B) 0x50EA633: sysmalloc (malloc.c:2484)
+|       ->01.88% (8,196,096B) 0x50EB741: _int_malloc (malloc.c:3827)
+|         ->01.85% (8,060,928B) 0x50EDDC8: calloc (malloc.c:3236)
+|         | ->01.85% (8,060,928B) 0x400AE4: main (in /home/anchu/raghesh/uw-openmp/benchmarks/uwopenmp-global-barrier/polybench-3.2/linear-algebra/kernels/gemver/transreuse)
+|         |   
+|         ->00.03% (135,168B) in 1+ places, all below ms_print's threshold (01.00%)
+|         
+->00.05% (212,992B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 99     45,394,956      439,549,952      439,549,952             0            0
+100     45,841,816      443,744,256      443,744,256             0            0
+101     46,288,676      447,938,560      447,938,560             0            0
+102     46,735,536      452,132,864      452,132,864             0            0
+103     47,182,396      456,327,168      456,327,168             0            0
+104     47,629,256      460,521,472      460,521,472             0            0
+105     48,076,116      464,715,776      464,715,776             0            0
+106     48,522,976      468,910,080      468,910,080             0            0
+107     48,969,836      473,104,384      473,104,384             0            0
+108     49,416,696      477,298,688      477,298,688             0            0
+100.00% (477,298,688B) (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+->95.57% (456,130,560B) 0x516A679: mmap (mmap.c:34)
+| ->95.57% (456,130,560B) 0x50EA7AD: sysmalloc (malloc.c:2517)
+|   ->95.57% (456,130,560B) 0x50EB741: _int_malloc (malloc.c:3827)
+|     ->95.57% (456,130,560B) 0x50EDDC8: calloc (malloc.c:3236)
+|       ->95.57% (456,130,560B) 0x400AE4: main (in /home/anchu/raghesh/uw-openmp/benchmarks/uwopenmp-global-barrier/polybench-3.2/linear-algebra/kernels/gemver/transreuse)
+|         
+->02.67% (12,759,040B) 0x401B479: mmap (mmap.c:34)
+| ->02.65% (12,644,352B) 0x40068CB: _dl_map_object_from_fd (dl-map-segments.h:56)
+| | ->02.65% (12,644,352B) 0x4008C25: _dl_map_object (dl-load.c:2476)
+| |   ->02.21% (10,539,008B) 0x400DBA0: openaux (dl-deps.c:63)
+| |   | ->02.21% (10,539,008B) 0x4010562: _dl_catch_error (dl-error.c:187)
+| |   |   ->02.21% (10,539,008B) 0x400E1E0: _dl_map_object_deps (dl-deps.c:254)
+| |   |     ->02.21% (10,539,008B) 0x4003A27: dl_main (rtld.c:1647)
+| |   |       ->02.21% (10,539,008B) 0x4019630: _dl_sysdep_start (dl-sysdep.c:249)
+| |   |         ->02.21% (10,539,008B) 0x4001C28: _dl_start (rtld.c:323)
+| |   |           ->02.21% (10,539,008B) 0x4000C36: ??? (in /lib/x86_64-linux-gnu/ld-2.23.so)
+| |   |             
+| |   ->00.44% (2,105,344B) in 1+ places, all below ms_print's threshold (01.00%)
+| |   
+| ->00.02% (114,688B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->01.72% (8,196,096B) 0x5165DD8: brk (brk.c:31)
+| ->01.72% (8,196,096B) 0x5165EB7: sbrk (sbrk.c:58)
+|   ->01.72% (8,196,096B) 0x50F08C7: __default_morecore (morecore.c:47)
+|     ->01.72% (8,196,096B) 0x50EA633: sysmalloc (malloc.c:2484)
+|       ->01.72% (8,196,096B) 0x50EB741: _int_malloc (malloc.c:3827)
+|         ->01.69% (8,060,928B) 0x50EDDC8: calloc (malloc.c:3236)
+|         | ->01.69% (8,060,928B) 0x400AE4: main (in /home/anchu/raghesh/uw-openmp/benchmarks/uwopenmp-global-barrier/polybench-3.2/linear-algebra/kernels/gemver/transreuse)
+|         |   
+|         ->00.03% (135,168B) in 1+ places, all below ms_print's threshold (01.00%)
+|         
+->00.04% (212,992B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+109     49,863,556      481,492,992      481,492,992             0            0
+110     50,310,416      485,687,296      485,687,296             0            0
+111     50,757,276      489,881,600      489,881,600             0            0
+112     51,204,136      494,075,904      494,075,904             0            0
+113     51,650,996      498,270,208      498,270,208             0            0
+114     52,097,856      502,464,512      502,464,512             0            0
+115     52,544,716      506,658,816      506,658,816             0            0
+116     52,991,576      510,853,120      510,853,120             0            0
+117     53,438,436      515,047,424      515,047,424             0            0
+118     53,885,296      519,241,728      519,241,728             0            0
+100.00% (519,241,728B) (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+->95.92% (498,073,600B) 0x516A679: mmap (mmap.c:34)
+| ->95.92% (498,073,600B) 0x50EA7AD: sysmalloc (malloc.c:2517)
+|   ->95.92% (498,073,600B) 0x50EB741: _int_malloc (malloc.c:3827)
+|     ->95.92% (498,073,600B) 0x50EDDC8: calloc (malloc.c:3236)
+|       ->95.92% (498,073,600B) 0x400AE4: main (in /home/anchu/raghesh/uw-openmp/benchmarks/uwopenmp-global-barrier/polybench-3.2/linear-algebra/kernels/gemver/transreuse)
+|         
+->02.46% (12,759,040B) 0x401B479: mmap (mmap.c:34)
+| ->02.44% (12,644,352B) 0x40068CB: _dl_map_object_from_fd (dl-map-segments.h:56)
+| | ->02.44% (12,644,352B) 0x4008C25: _dl_map_object (dl-load.c:2476)
+| |   ->02.03% (10,539,008B) 0x400DBA0: openaux (dl-deps.c:63)
+| |   | ->02.03% (10,539,008B) 0x4010562: _dl_catch_error (dl-error.c:187)
+| |   |   ->02.03% (10,539,008B) 0x400E1E0: _dl_map_object_deps (dl-deps.c:254)
+| |   |     ->02.03% (10,539,008B) 0x4003A27: dl_main (rtld.c:1647)
+| |   |       ->02.03% (10,539,008B) 0x4019630: _dl_sysdep_start (dl-sysdep.c:249)
+| |   |         ->02.03% (10,539,008B) 0x4001C28: _dl_start (rtld.c:323)
+| |   |           ->02.03% (10,539,008B) 0x4000C36: ??? (in /lib/x86_64-linux-gnu/ld-2.23.so)
+| |   |             
+| |   ->00.41% (2,105,344B) in 1+ places, all below ms_print's threshold (01.00%)
+| |   
+| ->00.02% (114,688B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->01.58% (8,196,096B) 0x5165DD8: brk (brk.c:31)
+| ->01.58% (8,196,096B) 0x5165EB7: sbrk (sbrk.c:58)
+|   ->01.58% (8,196,096B) 0x50F08C7: __default_morecore (morecore.c:47)
+|     ->01.58% (8,196,096B) 0x50EA633: sysmalloc (malloc.c:2484)
+|       ->01.58% (8,196,096B) 0x50EB741: _int_malloc (malloc.c:3827)
+|         ->01.55% (8,060,928B) 0x50EDDC8: calloc (malloc.c:3236)
+|         | ->01.55% (8,060,928B) 0x400AE4: main (in /home/anchu/raghesh/uw-openmp/benchmarks/uwopenmp-global-barrier/polybench-3.2/linear-algebra/kernels/gemver/transreuse)
+|         |   
+|         ->00.03% (135,168B) in 1+ places, all below ms_print's threshold (01.00%)
+|         
+->00.04% (212,992B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+119     54,332,156      523,436,032      523,436,032             0            0
+120     54,779,016      527,630,336      527,630,336             0            0
+121     55,225,876      531,824,640      531,824,640             0            0
+122     55,672,736      536,018,944      536,018,944             0            0
+123     56,119,596      540,213,248      540,213,248             0            0
+124     56,566,456      544,407,552      544,407,552             0            0
+125     57,013,316      548,601,856      548,601,856             0            0
+126     57,460,176      552,796,160      552,796,160             0            0
+127     57,907,036      556,990,464      556,990,464             0            0
+128     58,353,896      561,184,768      561,184,768             0            0
+100.00% (561,184,768B) (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+->96.23% (540,016,640B) 0x516A679: mmap (mmap.c:34)
+| ->96.23% (540,016,640B) 0x50EA7AD: sysmalloc (malloc.c:2517)
+|   ->96.23% (540,016,640B) 0x50EB741: _int_malloc (malloc.c:3827)
+|     ->96.23% (540,016,640B) 0x50EDDC8: calloc (malloc.c:3236)
+|       ->96.23% (540,016,640B) 0x400AE4: main (in /home/anchu/raghesh/uw-openmp/benchmarks/uwopenmp-global-barrier/polybench-3.2/linear-algebra/kernels/gemver/transreuse)
+|         
+->02.27% (12,759,040B) 0x401B479: mmap (mmap.c:34)
+| ->02.25% (12,644,352B) 0x40068CB: _dl_map_object_from_fd (dl-map-segments.h:56)
+| | ->02.25% (12,644,352B) 0x4008C25: _dl_map_object (dl-load.c:2476)
+| |   ->01.88% (10,539,008B) 0x400DBA0: openaux (dl-deps.c:63)
+| |   | ->01.88% (10,539,008B) 0x4010562: _dl_catch_error (dl-error.c:187)
+| |   |   ->01.88% (10,539,008B) 0x400E1E0: _dl_map_object_deps (dl-deps.c:254)
+| |   |     ->01.88% (10,539,008B) 0x4003A27: dl_main (rtld.c:1647)
+| |   |       ->01.88% (10,539,008B) 0x4019630: _dl_sysdep_start (dl-sysdep.c:249)
+| |   |         ->01.88% (10,539,008B) 0x4001C28: _dl_start (rtld.c:323)
+| |   |           ->01.88% (10,539,008B) 0x4000C36: ??? (in /lib/x86_64-linux-gnu/ld-2.23.so)
+| |   |             
+| |   ->00.38% (2,105,344B) in 1+ places, all below ms_print's threshold (01.00%)
+| |   
+| ->00.02% (114,688B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->01.46% (8,196,096B) 0x5165DD8: brk (brk.c:31)
+| ->01.46% (8,196,096B) 0x5165EB7: sbrk (sbrk.c:58)
+|   ->01.46% (8,196,096B) 0x50F08C7: __default_morecore (morecore.c:47)
+|     ->01.46% (8,196,096B) 0x50EA633: sysmalloc (malloc.c:2484)
+|       ->01.46% (8,196,096B) 0x50EB741: _int_malloc (malloc.c:3827)
+|         ->01.44% (8,060,928B) 0x50EDDC8: calloc (malloc.c:3236)
+|         | ->01.44% (8,060,928B) 0x400AE4: main (in /home/anchu/raghesh/uw-openmp/benchmarks/uwopenmp-global-barrier/polybench-3.2/linear-algebra/kernels/gemver/transreuse)
+|         |   
+|         ->00.02% (135,168B) in 1+ places, all below ms_print's threshold (01.00%)
+|         
+->00.04% (212,992B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+129     58,800,756      565,379,072      565,379,072             0            0
+130     59,247,616      569,573,376      569,573,376             0            0
+131     59,694,476      573,767,680      573,767,680             0            0
+132     60,141,336      577,961,984      577,961,984             0            0
+133     60,588,196      582,156,288      582,156,288             0            0
+134    363,643,206      619,909,120      619,909,120             0            0
+135    384,624,759      586,354,688      586,354,688             0            0
+100.00% (586,354,688B) (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+->96.39% (565,186,560B) 0x516A679: mmap (mmap.c:34)
+| ->96.39% (565,182,464B) 0x50EA7AD: sysmalloc (malloc.c:2517)
+| | ->96.39% (565,182,464B) 0x50EB741: _int_malloc (malloc.c:3827)
+| |   ->96.39% (565,182,464B) 0x50EDDC8: calloc (malloc.c:3236)
+| |     ->96.21% (564,133,888B) 0x400AE4: main (in /home/anchu/raghesh/uw-openmp/benchmarks/uwopenmp-global-barrier/polybench-3.2/linear-algebra/kernels/gemver/transreuse)
+| |     | 
+| |     ->00.18% (1,048,576B) in 1+ places, all below ms_print's threshold (01.00%)
+| |     
+| ->00.00% (4,096B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->02.18% (12,759,040B) 0x401B479: mmap (mmap.c:34)
+| ->02.16% (12,644,352B) 0x40068CB: _dl_map_object_from_fd (dl-map-segments.h:56)
+| | ->02.16% (12,644,352B) 0x4008C25: _dl_map_object (dl-load.c:2476)
+| |   ->01.80% (10,539,008B) 0x400DBA0: openaux (dl-deps.c:63)
+| |   | ->01.80% (10,539,008B) 0x4010562: _dl_catch_error (dl-error.c:187)
+| |   |   ->01.80% (10,539,008B) 0x400E1E0: _dl_map_object_deps (dl-deps.c:254)
+| |   |     ->01.80% (10,539,008B) 0x4003A27: dl_main (rtld.c:1647)
+| |   |       ->01.80% (10,539,008B) 0x4019630: _dl_sysdep_start (dl-sysdep.c:249)
+| |   |         ->01.80% (10,539,008B) 0x4001C28: _dl_start (rtld.c:323)
+| |   |           ->01.80% (10,539,008B) 0x4000C36: ??? (in /lib/x86_64-linux-gnu/ld-2.23.so)
+| |   |             
+| |   ->00.36% (2,105,344B) in 1+ places, all below ms_print's threshold (01.00%)
+| |   
+| ->00.02% (114,688B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->01.40% (8,196,096B) 0x5165DD8: brk (brk.c:31)
+| ->01.40% (8,196,096B) 0x5165EB7: sbrk (sbrk.c:58)
+|   ->01.40% (8,196,096B) 0x50F08C7: __default_morecore (morecore.c:47)
+|     ->01.40% (8,196,096B) 0x50EA633: sysmalloc (malloc.c:2484)
+|       ->01.40% (8,196,096B) 0x50EB741: _int_malloc (malloc.c:3827)
+|         ->01.37% (8,060,928B) 0x50EDDC8: calloc (malloc.c:3236)
+|         | ->01.37% (8,060,928B) 0x400AE4: main (in /home/anchu/raghesh/uw-openmp/benchmarks/uwopenmp-global-barrier/polybench-3.2/linear-algebra/kernels/gemver/transreuse)
+|         |   
+|         ->00.02% (135,168B) in 1+ places, all below ms_print's threshold (01.00%)
+|         
+->00.04% (212,992B) in 1+ places, all below ms_print's threshold (01.00%)
+

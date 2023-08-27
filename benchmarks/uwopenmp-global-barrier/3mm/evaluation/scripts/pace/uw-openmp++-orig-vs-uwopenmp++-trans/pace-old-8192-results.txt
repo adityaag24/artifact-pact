@@ -1,0 +1,18 @@
+
+ Performance counter stats for './old' (5 runs):
+
+6,56,70,24,26,75,869      cycles                     ( +- 10.09% ) [50.00%]
+          7,66,829      context-switches                                              ( +- 14.14% )
+             6,393      cpu-migrations                                                ( +-  9.26% )
+1,21,11,09,31,20,992      instructions              #    0.18  insns per cycle        
+                                                  #    4.98  stalled cycles per insn  ( +-  0.66% ) [62.50%]
+6,03,52,42,39,99,653      stalled-cycles-frontend   #   91.90% frontend cycles idle     ( +- 10.92% ) [62.50%]
+12,28,46,77,38,806      branches                                                      ( +-  1.51% ) [62.50%]
+      84,94,22,661      branch-misses             #    0.07% of all branches          ( +- 11.19% ) [62.50%]
+29,03,73,05,72,197      cache-references                                              ( +-  3.54% ) [62.50%]
+   55,49,21,30,329      cache-misses              #    1.911 % of all cache refs      ( +- 13.96% ) [50.00%]
+      31,72,53,257      page-faults                                                   ( +- 14.20% )
+    1,70,36,94,593      L1-icache-load-misses                                         ( +- 10.09% ) [50.00%]
+
+    1214.028354126 seconds time elapsed                                          ( +- 10.43% )
+

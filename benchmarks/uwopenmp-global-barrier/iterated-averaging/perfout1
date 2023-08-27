@@ -1,0 +1,54 @@
+raghesh@revathy:/mnt/data/phdprep/projects/uw-openmp/benchmarks/uwopenmp-global-barrier/iterated-averaging$ perf stat ./transold126 
+#iterations = 23667
+Run time = 0.217871
+
+ Performance counter stats for './transold126':
+
+        424.982618 task-clock (msec)         #    1.941 CPUs utilized          
+                79 context-switches          #    0.186 K/sec                  
+                 3 cpu-migrations            #    0.007 K/sec                  
+               209 page-faults               #    0.492 K/sec                  
+    1,16,33,04,805 cycles                    #    2.737 GHz                     [83.26%]
+      68,92,47,566 stalled-cycles-frontend   #   59.25% frontend cycles idle    [83.11%]
+      54,31,70,779 stalled-cycles-backend    #   46.69% backend  cycles idle    [65.59%]
+    1,35,53,40,222 instructions              #    1.17  insns per cycle        
+                                             #    0.51  stalled cycles per insn [83.22%]
+      27,88,14,047 branches                  #  656.060 M/sec                   [84.08%]
+         20,35,678 branch-misses             #    0.73% of all branches         [83.97%]
+
+       0.218914272 seconds time elapsed
+
+raghesh@revathy:/mnt/data/phdprep/projects/uw-openmp/benchmarks/uwopenmp-global-barrier/iterated-averaging$ perf stat ./transold500
+#iterations = 435937
+Run time = 6.198095
+
+ Performance counter stats for './transold500':
+
+      12344.294106 task-clock (msec)         #    1.991 CPUs utilized          
+             1,382 context-switches          #    0.112 K/sec                  
+                 9 cpu-migrations            #    0.001 K/sec                  
+               213 page-faults               #    0.017 K/sec                  
+   34,30,35,99,471 cycles                    #    2.779 GHz                     [83.30%]
+   11,12,47,76,765 stalled-cycles-frontend   #   32.43% frontend cycles idle    [83.34%]
+    8,00,44,87,149 stalled-cycles-backend    #   23.33% backend  cycles idle    [66.61%]
+   80,87,44,37,758 instructions              #    2.36  insns per cycle        
+                                             #    0.14  stalled cycles per insn [83.36%]
+   16,99,87,92,000 branches                  # 1377.057 M/sec                   [83.37%]
+       2,95,15,769 branch-misses             #    0.17% of all branches         [83.39%]
+
+       6.200285543 seconds time elapsed
+
+% differences
+=============
+28.04 task clock
+16.49 context switches
+2 cpu-migrations
+0.0191 page-faults
+28.48 cycles
+15.140 fcycles
+13.73 bcycles
+58.67 instructions
+59.96 branches
+13.499  branch misses
+
+27.32

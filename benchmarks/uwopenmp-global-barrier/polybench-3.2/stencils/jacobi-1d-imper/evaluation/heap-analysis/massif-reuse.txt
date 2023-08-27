@@ -1,0 +1,1347 @@
+desc: --pages-as-heap=yes --max-snapshots=200
+cmd: ./transreuse
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=12288
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=0
+mem_heap_B=20480
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=0
+mem_heap_B=176128
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=0
+mem_heap_B=184320
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=0
+mem_heap_B=188416
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=0
+mem_heap_B=192512
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=0
+mem_heap_B=196608
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=0
+mem_heap_B=208896
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=0
+mem_heap_B=212992
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=0
+mem_heap_B=217088
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=detailed
+n2: 217088 (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+ n0: 212992 0xFFFFFFFFFFFFFFFF: ???
+ n0: 4096 0x4000C2F: ??? (in /lib/x86_64-linux-gnu/ld-2.23.so)
+#-----------
+snapshot=10
+#-----------
+time=0
+mem_heap_B=217088
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=detailed
+n2: 217088 (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+ n0: 212992 0xFFFFFFFFFFFFFFFF: ???
+ n0: 4096 0x4000C2F: ??? (in /lib/x86_64-linux-gnu/ld-2.23.so)
+#-----------
+snapshot=11
+#-----------
+time=0
+mem_heap_B=212992
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=0
+mem_heap_B=212992
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=3165
+mem_heap_B=221184
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=6806
+mem_heap_B=2326528
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=6918
+mem_heap_B=2334720
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=10229
+mem_heap_B=2433024
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=12986
+mem_heap_B=4669440
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=13098
+mem_heap_B=4677632
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=16797
+mem_heap_B=4681728
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=17460
+mem_heap_B=6897664
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=detailed
+n3: 6897664 (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+ n3: 6684672 0x401B479: mmap (mmap.c:34)
+  n1: 6557696 0x40068CB: _dl_map_object_from_fd (dl-map-segments.h:56)
+   n2: 6557696 0x4008C25: _dl_map_object (dl-load.c:2476)
+    n1: 4452352 0x400DBA0: openaux (dl-deps.c:63)
+     n1: 4452352 0x4010562: _dl_catch_error (dl-error.c:187)
+      n1: 4452352 0x400E1E0: _dl_map_object_deps (dl-deps.c:254)
+       n1: 4452352 0x4003A27: dl_main (rtld.c:1647)
+        n1: 4452352 0x4019630: _dl_sysdep_start (dl-sysdep.c:249)
+         n1: 4452352 0x4001C28: _dl_start (rtld.c:323)
+          n0: 4452352 0x4000C36: ??? (in /lib/x86_64-linux-gnu/ld-2.23.so)
+    n1: 2105344 0x4000EB3: map_doit (rtld.c:499)
+     n1: 2105344 0x4010562: _dl_catch_error (dl-error.c:187)
+      n1: 2105344 0x40020D4: handle_ld_preload (rtld.c:682)
+       n1: 2105344 0x40039AD: dl_main (rtld.c:1539)
+        n1: 2105344 0x4019630: _dl_sysdep_start (dl-sysdep.c:249)
+         n1: 2105344 0x4001C28: _dl_start (rtld.c:323)
+          n0: 2105344 0x4000C36: ??? (in /lib/x86_64-linux-gnu/ld-2.23.so)
+  n1: 98304 0x4011773: _dl_sysdep_read_whole_file (dl-misc.c:62)
+   n1: 98304 0x4018506: _dl_load_cache_lookup (dl-cache.c:199)
+    n1: 98304 0x4009167: _dl_map_object (dl-load.c:2342)
+     n1: 98304 0x400DBA0: openaux (dl-deps.c:63)
+      n1: 98304 0x4010562: _dl_catch_error (dl-error.c:187)
+       n1: 98304 0x400E1E0: _dl_map_object_deps (dl-deps.c:254)
+        n1: 98304 0x4003A27: dl_main (rtld.c:1647)
+         n1: 98304 0x4019630: _dl_sysdep_start (dl-sysdep.c:249)
+          n1: 98304 0x4001C28: _dl_start (rtld.c:323)
+           n0: 98304 0x4000C36: ??? (in /lib/x86_64-linux-gnu/ld-2.23.so)
+  n0: 28672 in 2 places, all below massif's threshold (1.00%)
+ n0: 212992 0xFFFFFFFFFFFFFFFF: ???
+ n0: 0 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=21
+#-----------
+time=17552
+mem_heap_B=6905856
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=18025
+mem_heap_B=6922240
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=22290
+mem_heap_B=10895360
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=22382
+mem_heap_B=10919936
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=22729
+mem_heap_B=10936320
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=27525
+mem_heap_B=13049856
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=27637
+mem_heap_B=13058048
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=35256
+mem_heap_B=13062144
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=49784
+mem_heap_B=13070336
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=168874
+mem_heap_B=12976128
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=detailed
+n3: 12976128 (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+ n2: 12763136 0x401B479: mmap (mmap.c:34)
+  n1: 12644352 0x40068CB: _dl_map_object_from_fd (dl-map-segments.h:56)
+   n2: 12644352 0x4008C25: _dl_map_object (dl-load.c:2476)
+    n1: 10539008 0x400DBA0: openaux (dl-deps.c:63)
+     n1: 10539008 0x4010562: _dl_catch_error (dl-error.c:187)
+      n1: 10539008 0x400E1E0: _dl_map_object_deps (dl-deps.c:254)
+       n1: 10539008 0x4003A27: dl_main (rtld.c:1647)
+        n1: 10539008 0x4019630: _dl_sysdep_start (dl-sysdep.c:249)
+         n1: 10539008 0x4001C28: _dl_start (rtld.c:323)
+          n0: 10539008 0x4000C36: ??? (in /lib/x86_64-linux-gnu/ld-2.23.so)
+    n1: 2105344 0x4000EB3: map_doit (rtld.c:499)
+     n1: 2105344 0x4010562: _dl_catch_error (dl-error.c:187)
+      n1: 2105344 0x40020D4: handle_ld_preload (rtld.c:682)
+       n1: 2105344 0x40039AD: dl_main (rtld.c:1539)
+        n1: 2105344 0x4019630: _dl_sysdep_start (dl-sysdep.c:249)
+         n1: 2105344 0x4001C28: _dl_start (rtld.c:323)
+          n0: 2105344 0x4000C36: ??? (in /lib/x86_64-linux-gnu/ld-2.23.so)
+  n0: 118784 in 4 places, all below massif's threshold (1.00%)
+ n0: 212992 0xFFFFFFFFFFFFFFFF: ???
+ n0: 0 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=31
+#-----------
+time=168874
+mem_heap_B=12972032
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=239686
+mem_heap_B=13139968
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=244602
+mem_heap_B=13111296
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=detailed
+n4: 13111296 (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+ n2: 12759040 0x401B479: mmap (mmap.c:34)
+  n1: 12644352 0x40068CB: _dl_map_object_from_fd (dl-map-segments.h:56)
+   n2: 12644352 0x4008C25: _dl_map_object (dl-load.c:2476)
+    n1: 10539008 0x400DBA0: openaux (dl-deps.c:63)
+     n1: 10539008 0x4010562: _dl_catch_error (dl-error.c:187)
+      n1: 10539008 0x400E1E0: _dl_map_object_deps (dl-deps.c:254)
+       n1: 10539008 0x4003A27: dl_main (rtld.c:1647)
+        n1: 10539008 0x4019630: _dl_sysdep_start (dl-sysdep.c:249)
+         n1: 10539008 0x4001C28: _dl_start (rtld.c:323)
+          n0: 10539008 0x4000C36: ??? (in /lib/x86_64-linux-gnu/ld-2.23.so)
+    n1: 2105344 0x4000EB3: map_doit (rtld.c:499)
+     n1: 2105344 0x4010562: _dl_catch_error (dl-error.c:187)
+      n1: 2105344 0x40020D4: handle_ld_preload (rtld.c:682)
+       n1: 2105344 0x40039AD: dl_main (rtld.c:1539)
+        n1: 2105344 0x4019630: _dl_sysdep_start (dl-sysdep.c:249)
+         n1: 2105344 0x4001C28: _dl_start (rtld.c:323)
+          n0: 2105344 0x4000C36: ??? (in /lib/x86_64-linux-gnu/ld-2.23.so)
+  n0: 114688 in 4 places, all below massif's threshold (1.00%)
+ n0: 212992 0xFFFFFFFFFFFFFFFF: ???
+ n1: 139264 0x5165DD8: brk (brk.c:31)
+  n1: 139264 0x5165EB7: sbrk (sbrk.c:58)
+   n1: 139264 0x50F08C7: __default_morecore (morecore.c:47)
+    n1: 139264 0x50EA633: sysmalloc (malloc.c:2484)
+     n1: 139264 0x50EB741: _int_malloc (malloc.c:3827)
+      n1: 139264 0x50EE896: malloc_hook_ini (malloc.c:2913)
+       n1: 139264 0x51311B8: opendir (opendir.c:247)
+        n1: 139264 0x516EC04: get_nprocs_conf (getsysstats.c:238)
+         n1: 139264 0x51374C6: sysconf (sysconf.c:627)
+          n1: 139264 0x4C3B62E: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+           n1: 139264 0x4C30DE0: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+            n1: 139264 0x40106B8: call_init.part.0 (dl-init.c:72)
+             n1: 139264 0x40107C9: _dl_init (dl-init.c:30)
+              n0: 139264 0x4000C68: ??? (in /lib/x86_64-linux-gnu/ld-2.23.so)
+ n0: 0 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=34
+#-----------
+time=244602
+mem_heap_B=13107200
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=265597
+mem_heap_B=15208448
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=265906
+mem_heap_B=17309696
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=1773561
+mem_heap_B=50868224
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=1780409
+mem_heap_B=59260928
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=1785234
+mem_heap_B=67653632
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=1786177
+mem_heap_B=76046336
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=27124420
+mem_heap_B=42491904
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=detailed
+n3: 42491904 (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+ n2: 29384704 0x516A679: mmap (mmap.c:34)
+  n1: 25178112 0x4E541D4: pthread_create@@GLIBC_2.2.5 (allocatestack.c:513)
+   n1: 25178112 0x4C3999E: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n1: 25178112 0x400D06: polybench_timer_start (in /home/raghesh/uw-openmp/benchmarks/uwopenmp-global-barrier/polybench-3.2/stencils/jacobi-1d-imper/transreuse)
+     n0: 25178112 0x4017B9: main (in /home/raghesh/uw-openmp/benchmarks/uwopenmp-global-barrier/polybench-3.2/stencils/jacobi-1d-imper/transreuse)
+  n1: 4206592 0x50EAAFD: sysmalloc (malloc.c:2323)
+   n1: 4206592 0x50EB741: _int_malloc (malloc.c:3827)
+    n3: 4206592 0x50EDDC8: calloc (malloc.c:3236)
+     n0: 2101248 0x4016E2: main (in /home/raghesh/uw-openmp/benchmarks/uwopenmp-global-barrier/polybench-3.2/stencils/jacobi-1d-imper/transreuse)
+     n0: 2101248 0x4016F8: main (in /home/raghesh/uw-openmp/benchmarks/uwopenmp-global-barrier/polybench-3.2/stencils/jacobi-1d-imper/transreuse)
+     n0: 4096 in 1 place, below massif's threshold (1.00%)
+ n2: 12759040 0x401B479: mmap (mmap.c:34)
+  n1: 12644352 0x40068CB: _dl_map_object_from_fd (dl-map-segments.h:56)
+   n2: 12644352 0x4008C25: _dl_map_object (dl-load.c:2476)
+    n1: 10539008 0x400DBA0: openaux (dl-deps.c:63)
+     n1: 10539008 0x4010562: _dl_catch_error (dl-error.c:187)
+      n1: 10539008 0x400E1E0: _dl_map_object_deps (dl-deps.c:254)
+       n1: 10539008 0x4003A27: dl_main (rtld.c:1647)
+        n1: 10539008 0x4019630: _dl_sysdep_start (dl-sysdep.c:249)
+         n1: 10539008 0x4001C28: _dl_start (rtld.c:323)
+          n0: 10539008 0x4000C36: ??? (in /lib/x86_64-linux-gnu/ld-2.23.so)
+    n1: 2105344 0x4000EB3: map_doit (rtld.c:499)
+     n1: 2105344 0x4010562: _dl_catch_error (dl-error.c:187)
+      n1: 2105344 0x40020D4: handle_ld_preload (rtld.c:682)
+       n1: 2105344 0x40039AD: dl_main (rtld.c:1539)
+        n1: 2105344 0x4019630: _dl_sysdep_start (dl-sysdep.c:249)
+         n1: 2105344 0x4001C28: _dl_start (rtld.c:323)
+          n0: 2105344 0x4000C36: ??? (in /lib/x86_64-linux-gnu/ld-2.23.so)
+  n0: 114688 in 4 places, all below massif's threshold (1.00%)
+ n0: 348160 in 3 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=42
+#-----------
+time=27124420
+mem_heap_B=42487808
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=27159882
+mem_heap_B=44589056
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=27173041
+mem_heap_B=178806784
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=27173062
+mem_heap_B=130826240
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=detailed
+n3: 130826240 (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+ n3: 117719040 0x516A679: mmap (mmap.c:34)
+  n1: 86237184 0x50E63CF: new_heap (arena.c:438)
+   n1: 86237184 0x50E6C1F: arena_get2.part.3 (arena.c:646)
+    n1: 86237184 0x50ED248: malloc (malloc.c:2911)
+     n1: 86237184 0x4014D2: kernel_jacobi_1d_imper.omp_fn.0 (in /home/raghesh/uw-openmp/benchmarks/uwopenmp-global-barrier/polybench-3.2/stencils/jacobi-1d-imper/transreuse)
+      n1: 86237184 0x4C3943C: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+       n1: 86237184 0x4E536B8: start_thread (pthread_create.c:333)
+        n0: 86237184 0x51703DB: clone (clone.S:109)
+  n1: 25178112 0x4E541D4: pthread_create@@GLIBC_2.2.5 (allocatestack.c:513)
+   n1: 25178112 0x4C3999E: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n1: 25178112 0x400D06: polybench_timer_start (in /home/raghesh/uw-openmp/benchmarks/uwopenmp-global-barrier/polybench-3.2/stencils/jacobi-1d-imper/transreuse)
+     n0: 25178112 0x4017B9: main (in /home/raghesh/uw-openmp/benchmarks/uwopenmp-global-barrier/polybench-3.2/stencils/jacobi-1d-imper/transreuse)
+  n1: 6303744 0x50EAAFD: sysmalloc (malloc.c:2323)
+   n1: 6303744 0x50EB741: _int_malloc (malloc.c:3827)
+    n4: 6303744 0x50EDDC8: calloc (malloc.c:3236)
+     n0: 2101248 0x4016E2: main (in /home/raghesh/uw-openmp/benchmarks/uwopenmp-global-barrier/polybench-3.2/stencils/jacobi-1d-imper/transreuse)
+     n0: 2101248 0x4016F8: main (in /home/raghesh/uw-openmp/benchmarks/uwopenmp-global-barrier/polybench-3.2/stencils/jacobi-1d-imper/transreuse)
+     n1: 2101248 0x4016B7: kernel_jacobi_1d_imper.omp_fn.0 (in /home/raghesh/uw-openmp/benchmarks/uwopenmp-global-barrier/polybench-3.2/stencils/jacobi-1d-imper/transreuse)
+      n0: 2101248 0x401805: main (in /home/raghesh/uw-openmp/benchmarks/uwopenmp-global-barrier/polybench-3.2/stencils/jacobi-1d-imper/transreuse)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 12759040 0x401B479: mmap (mmap.c:34)
+  n1: 12644352 0x40068CB: _dl_map_object_from_fd (dl-map-segments.h:56)
+   n2: 12644352 0x4008C25: _dl_map_object (dl-load.c:2476)
+    n1: 10539008 0x400DBA0: openaux (dl-deps.c:63)
+     n1: 10539008 0x4010562: _dl_catch_error (dl-error.c:187)
+      n1: 10539008 0x400E1E0: _dl_map_object_deps (dl-deps.c:254)
+       n1: 10539008 0x4003A27: dl_main (rtld.c:1647)
+        n1: 10539008 0x4019630: _dl_sysdep_start (dl-sysdep.c:249)
+         n1: 10539008 0x4001C28: _dl_start (rtld.c:323)
+          n0: 10539008 0x4000C36: ??? (in /lib/x86_64-linux-gnu/ld-2.23.so)
+    n1: 2105344 0x4000EB3: map_doit (rtld.c:499)
+     n1: 2105344 0x4010562: _dl_catch_error (dl-error.c:187)
+      n1: 2105344 0x40020D4: handle_ld_preload (rtld.c:682)
+       n1: 2105344 0x40039AD: dl_main (rtld.c:1539)
+        n1: 2105344 0x4019630: _dl_sysdep_start (dl-sysdep.c:249)
+         n1: 2105344 0x4001C28: _dl_start (rtld.c:323)
+          n0: 2105344 0x4000C36: ??? (in /lib/x86_64-linux-gnu/ld-2.23.so)
+  n0: 114688 in 4 places, all below massif's threshold (1.00%)
+ n0: 348160 in 3 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=46
+#-----------
+time=27173062
+mem_heap_B=130822144
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=27173072
+mem_heap_B=111697920
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=56772662
+mem_heap_B=245915648
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=56772685
+mem_heap_B=178810880
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=detailed
+n3: 178810880 (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+ n3: 165703680 0x516A679: mmap (mmap.c:34)
+  n1: 134221824 0x50E63CF: new_heap (arena.c:438)
+   n1: 134221824 0x50E6C1F: arena_get2.part.3 (arena.c:646)
+    n1: 134221824 0x50ED248: malloc (malloc.c:2911)
+     n1: 134221824 0x4014D2: kernel_jacobi_1d_imper.omp_fn.0 (in /home/raghesh/uw-openmp/benchmarks/uwopenmp-global-barrier/polybench-3.2/stencils/jacobi-1d-imper/transreuse)
+      n1: 134221824 0x4C3943C: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+       n1: 134221824 0x4E536B8: start_thread (pthread_create.c:333)
+        n0: 134221824 0x51703DB: clone (clone.S:109)
+  n1: 25178112 0x4E541D4: pthread_create@@GLIBC_2.2.5 (allocatestack.c:513)
+   n1: 25178112 0x4C3999E: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n1: 25178112 0x400D06: polybench_timer_start (in /home/raghesh/uw-openmp/benchmarks/uwopenmp-global-barrier/polybench-3.2/stencils/jacobi-1d-imper/transreuse)
+     n0: 25178112 0x4017B9: main (in /home/raghesh/uw-openmp/benchmarks/uwopenmp-global-barrier/polybench-3.2/stencils/jacobi-1d-imper/transreuse)
+  n1: 6303744 0x50EAAFD: sysmalloc (malloc.c:2323)
+   n1: 6303744 0x50EB741: _int_malloc (malloc.c:3827)
+    n4: 6303744 0x50EDDC8: calloc (malloc.c:3236)
+     n0: 2101248 0x4016E2: main (in /home/raghesh/uw-openmp/benchmarks/uwopenmp-global-barrier/polybench-3.2/stencils/jacobi-1d-imper/transreuse)
+     n0: 2101248 0x4016F8: main (in /home/raghesh/uw-openmp/benchmarks/uwopenmp-global-barrier/polybench-3.2/stencils/jacobi-1d-imper/transreuse)
+     n1: 2101248 0x4016B7: kernel_jacobi_1d_imper.omp_fn.0 (in /home/raghesh/uw-openmp/benchmarks/uwopenmp-global-barrier/polybench-3.2/stencils/jacobi-1d-imper/transreuse)
+      n0: 2101248 0x401805: main (in /home/raghesh/uw-openmp/benchmarks/uwopenmp-global-barrier/polybench-3.2/stencils/jacobi-1d-imper/transreuse)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 12759040 0x401B479: mmap (mmap.c:34)
+  n1: 12644352 0x40068CB: _dl_map_object_from_fd (dl-map-segments.h:56)
+   n2: 12644352 0x4008C25: _dl_map_object (dl-load.c:2476)
+    n1: 10539008 0x400DBA0: openaux (dl-deps.c:63)
+     n1: 10539008 0x4010562: _dl_catch_error (dl-error.c:187)
+      n1: 10539008 0x400E1E0: _dl_map_object_deps (dl-deps.c:254)
+       n1: 10539008 0x4003A27: dl_main (rtld.c:1647)
+        n1: 10539008 0x4019630: _dl_sysdep_start (dl-sysdep.c:249)
+         n1: 10539008 0x4001C28: _dl_start (rtld.c:323)
+          n0: 10539008 0x4000C36: ??? (in /lib/x86_64-linux-gnu/ld-2.23.so)
+    n1: 2105344 0x4000EB3: map_doit (rtld.c:499)
+     n1: 2105344 0x4010562: _dl_catch_error (dl-error.c:187)
+      n1: 2105344 0x40020D4: handle_ld_preload (rtld.c:682)
+       n1: 2105344 0x40039AD: dl_main (rtld.c:1539)
+        n1: 2105344 0x4019630: _dl_sysdep_start (dl-sysdep.c:249)
+         n1: 2105344 0x4001C28: _dl_start (rtld.c:323)
+          n0: 2105344 0x4000C36: ??? (in /lib/x86_64-linux-gnu/ld-2.23.so)
+  n0: 114688 in 4 places, all below massif's threshold (1.00%)
+ n0: 348160 in 3 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=50
+#-----------
+time=56772685
+mem_heap_B=178806784
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=60196273
+mem_heap_B=245915648
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=93729536
+mem_heap_B=246050816
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=94262962
+mem_heap_B=246185984
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=94796622
+mem_heap_B=246321152
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=95330282
+mem_heap_B=246456320
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=56
+#-----------
+time=95863734
+mem_heap_B=246591488
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=57
+#-----------
+time=96397394
+mem_heap_B=246726656
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=58
+#-----------
+time=119697501
+mem_heap_B=246861824
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=120231161
+mem_heap_B=246996992
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=detailed
+n3: 246996992 (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+ n4: 232808448 0x516A679: mmap (mmap.c:34)
+  n1: 134217728 0x50E63CF: new_heap (arena.c:438)
+   n1: 134217728 0x50E6C1F: arena_get2.part.3 (arena.c:646)
+    n1: 134217728 0x50ED248: malloc (malloc.c:2911)
+     n1: 134217728 0x4014D2: kernel_jacobi_1d_imper.omp_fn.0 (in /home/raghesh/uw-openmp/benchmarks/uwopenmp-global-barrier/polybench-3.2/stencils/jacobi-1d-imper/transreuse)
+      n1: 134217728 0x4C3943C: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+       n1: 134217728 0x4E536B8: start_thread (pthread_create.c:333)
+        n0: 134217728 0x51703DB: clone (clone.S:109)
+  n1: 67108864 0x50E635B: new_heap (arena.c:427)
+   n1: 67108864 0x50E6C1F: arena_get2.part.3 (arena.c:646)
+    n1: 67108864 0x50ED248: malloc (malloc.c:2911)
+     n1: 67108864 0x4014D2: kernel_jacobi_1d_imper.omp_fn.0 (in /home/raghesh/uw-openmp/benchmarks/uwopenmp-global-barrier/polybench-3.2/stencils/jacobi-1d-imper/transreuse)
+      n1: 67108864 0x4C3943C: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+       n1: 67108864 0x4E536B8: start_thread (pthread_create.c:333)
+        n0: 67108864 0x51703DB: clone (clone.S:109)
+  n1: 25178112 0x4E541D4: pthread_create@@GLIBC_2.2.5 (allocatestack.c:513)
+   n1: 25178112 0x4C3999E: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n1: 25178112 0x400D06: polybench_timer_start (in /home/raghesh/uw-openmp/benchmarks/uwopenmp-global-barrier/polybench-3.2/stencils/jacobi-1d-imper/transreuse)
+     n0: 25178112 0x4017B9: main (in /home/raghesh/uw-openmp/benchmarks/uwopenmp-global-barrier/polybench-3.2/stencils/jacobi-1d-imper/transreuse)
+  n1: 6303744 0x50EAAFD: sysmalloc (malloc.c:2323)
+   n1: 6303744 0x50EB741: _int_malloc (malloc.c:3827)
+    n1: 6303744 0x50EDDC8: calloc (malloc.c:3236)
+     n0: 6303744 in 4 places, all below massif's threshold (1.00%)
+ n2: 12759040 0x401B479: mmap (mmap.c:34)
+  n1: 12644352 0x40068CB: _dl_map_object_from_fd (dl-map-segments.h:56)
+   n2: 12644352 0x4008C25: _dl_map_object (dl-load.c:2476)
+    n1: 10539008 0x400DBA0: openaux (dl-deps.c:63)
+     n1: 10539008 0x4010562: _dl_catch_error (dl-error.c:187)
+      n1: 10539008 0x400E1E0: _dl_map_object_deps (dl-deps.c:254)
+       n1: 10539008 0x4003A27: dl_main (rtld.c:1647)
+        n1: 10539008 0x4019630: _dl_sysdep_start (dl-sysdep.c:249)
+         n1: 10539008 0x4001C28: _dl_start (rtld.c:323)
+          n0: 10539008 0x4000C36: ??? (in /lib/x86_64-linux-gnu/ld-2.23.so)
+    n0: 2105344 in 1 place, below massif's threshold (1.00%)
+  n0: 114688 in 4 places, all below massif's threshold (1.00%)
+ n0: 1429504 in 3 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=60
+#-----------
+time=120764587
+mem_heap_B=247132160
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=61
+#-----------
+time=121298247
+mem_heap_B=247267328
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=62
+#-----------
+time=121831907
+mem_heap_B=247402496
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=63
+#-----------
+time=122365359
+mem_heap_B=247537664
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=64
+#-----------
+time=122906033
+mem_heap_B=247672832
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=65
+#-----------
+time=123439693
+mem_heap_B=247808000
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=66
+#-----------
+time=123973353
+mem_heap_B=247943168
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=67
+#-----------
+time=124506779
+mem_heap_B=248078336
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=68
+#-----------
+time=125040439
+mem_heap_B=248213504
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=69
+#-----------
+time=125574099
+mem_heap_B=248348672
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=detailed
+n4: 248348672 (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+ n4: 232808448 0x516A679: mmap (mmap.c:34)
+  n1: 134217728 0x50E63CF: new_heap (arena.c:438)
+   n1: 134217728 0x50E6C1F: arena_get2.part.3 (arena.c:646)
+    n1: 134217728 0x50ED248: malloc (malloc.c:2911)
+     n1: 134217728 0x4014D2: kernel_jacobi_1d_imper.omp_fn.0 (in /home/raghesh/uw-openmp/benchmarks/uwopenmp-global-barrier/polybench-3.2/stencils/jacobi-1d-imper/transreuse)
+      n1: 134217728 0x4C3943C: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+       n1: 134217728 0x4E536B8: start_thread (pthread_create.c:333)
+        n0: 134217728 0x51703DB: clone (clone.S:109)
+  n1: 67108864 0x50E635B: new_heap (arena.c:427)
+   n1: 67108864 0x50E6C1F: arena_get2.part.3 (arena.c:646)
+    n1: 67108864 0x50ED248: malloc (malloc.c:2911)
+     n1: 67108864 0x4014D2: kernel_jacobi_1d_imper.omp_fn.0 (in /home/raghesh/uw-openmp/benchmarks/uwopenmp-global-barrier/polybench-3.2/stencils/jacobi-1d-imper/transreuse)
+      n1: 67108864 0x4C3943C: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+       n1: 67108864 0x4E536B8: start_thread (pthread_create.c:333)
+        n0: 67108864 0x51703DB: clone (clone.S:109)
+  n1: 25178112 0x4E541D4: pthread_create@@GLIBC_2.2.5 (allocatestack.c:513)
+   n1: 25178112 0x4C3999E: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n1: 25178112 0x400D06: polybench_timer_start (in /home/raghesh/uw-openmp/benchmarks/uwopenmp-global-barrier/polybench-3.2/stencils/jacobi-1d-imper/transreuse)
+     n0: 25178112 0x4017B9: main (in /home/raghesh/uw-openmp/benchmarks/uwopenmp-global-barrier/polybench-3.2/stencils/jacobi-1d-imper/transreuse)
+  n1: 6303744 0x50EAAFD: sysmalloc (malloc.c:2323)
+   n1: 6303744 0x50EB741: _int_malloc (malloc.c:3827)
+    n1: 6303744 0x50EDDC8: calloc (malloc.c:3236)
+     n0: 6303744 in 4 places, all below massif's threshold (1.00%)
+ n2: 12759040 0x401B479: mmap (mmap.c:34)
+  n1: 12644352 0x40068CB: _dl_map_object_from_fd (dl-map-segments.h:56)
+   n2: 12644352 0x4008C25: _dl_map_object (dl-load.c:2476)
+    n1: 10539008 0x400DBA0: openaux (dl-deps.c:63)
+     n1: 10539008 0x4010562: _dl_catch_error (dl-error.c:187)
+      n1: 10539008 0x400E1E0: _dl_map_object_deps (dl-deps.c:254)
+       n1: 10539008 0x4003A27: dl_main (rtld.c:1647)
+        n1: 10539008 0x4019630: _dl_sysdep_start (dl-sysdep.c:249)
+         n1: 10539008 0x4001C28: _dl_start (rtld.c:323)
+          n0: 10539008 0x4000C36: ??? (in /lib/x86_64-linux-gnu/ld-2.23.so)
+    n0: 2105344 in 1 place, below massif's threshold (1.00%)
+  n0: 114688 in 4 places, all below massif's threshold (1.00%)
+ n1: 2568192 0x5165DD8: brk (brk.c:31)
+  n1: 2568192 0x5165EB7: sbrk (sbrk.c:58)
+   n1: 2568192 0x50F08C7: __default_morecore (morecore.c:47)
+    n1: 2568192 0x50EA633: sysmalloc (malloc.c:2484)
+     n1: 2568192 0x50EB741: _int_malloc (malloc.c:3827)
+      n0: 2568192 in 2 places, all below massif's threshold (1.00%)
+ n0: 212992 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=70
+#-----------
+time=126107551
+mem_heap_B=248483840
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=71
+#-----------
+time=126641211
+mem_heap_B=248619008
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=72
+#-----------
+time=127174871
+mem_heap_B=248754176
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=73
+#-----------
+time=127708531
+mem_heap_B=248889344
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=74
+#-----------
+time=128241957
+mem_heap_B=249024512
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=75
+#-----------
+time=128775617
+mem_heap_B=249159680
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=76
+#-----------
+time=129309277
+mem_heap_B=249294848
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=77
+#-----------
+time=129842729
+mem_heap_B=249430016
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=78
+#-----------
+time=130376389
+mem_heap_B=249565184
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=79
+#-----------
+time=130910049
+mem_heap_B=249700352
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=detailed
+n4: 249700352 (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+ n4: 232808448 0x516A679: mmap (mmap.c:34)
+  n1: 134217728 0x50E63CF: new_heap (arena.c:438)
+   n1: 134217728 0x50E6C1F: arena_get2.part.3 (arena.c:646)
+    n1: 134217728 0x50ED248: malloc (malloc.c:2911)
+     n1: 134217728 0x4014D2: kernel_jacobi_1d_imper.omp_fn.0 (in /home/raghesh/uw-openmp/benchmarks/uwopenmp-global-barrier/polybench-3.2/stencils/jacobi-1d-imper/transreuse)
+      n1: 134217728 0x4C3943C: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+       n1: 134217728 0x4E536B8: start_thread (pthread_create.c:333)
+        n0: 134217728 0x51703DB: clone (clone.S:109)
+  n1: 67108864 0x50E635B: new_heap (arena.c:427)
+   n1: 67108864 0x50E6C1F: arena_get2.part.3 (arena.c:646)
+    n1: 67108864 0x50ED248: malloc (malloc.c:2911)
+     n1: 67108864 0x4014D2: kernel_jacobi_1d_imper.omp_fn.0 (in /home/raghesh/uw-openmp/benchmarks/uwopenmp-global-barrier/polybench-3.2/stencils/jacobi-1d-imper/transreuse)
+      n1: 67108864 0x4C3943C: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+       n1: 67108864 0x4E536B8: start_thread (pthread_create.c:333)
+        n0: 67108864 0x51703DB: clone (clone.S:109)
+  n1: 25178112 0x4E541D4: pthread_create@@GLIBC_2.2.5 (allocatestack.c:513)
+   n1: 25178112 0x4C3999E: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n1: 25178112 0x400D06: polybench_timer_start (in /home/raghesh/uw-openmp/benchmarks/uwopenmp-global-barrier/polybench-3.2/stencils/jacobi-1d-imper/transreuse)
+     n0: 25178112 0x4017B9: main (in /home/raghesh/uw-openmp/benchmarks/uwopenmp-global-barrier/polybench-3.2/stencils/jacobi-1d-imper/transreuse)
+  n1: 6303744 0x50EAAFD: sysmalloc (malloc.c:2323)
+   n1: 6303744 0x50EB741: _int_malloc (malloc.c:3827)
+    n1: 6303744 0x50EDDC8: calloc (malloc.c:3236)
+     n0: 6303744 in 4 places, all below massif's threshold (1.00%)
+ n2: 12759040 0x401B479: mmap (mmap.c:34)
+  n1: 12644352 0x40068CB: _dl_map_object_from_fd (dl-map-segments.h:56)
+   n2: 12644352 0x4008C25: _dl_map_object (dl-load.c:2476)
+    n1: 10539008 0x400DBA0: openaux (dl-deps.c:63)
+     n1: 10539008 0x4010562: _dl_catch_error (dl-error.c:187)
+      n1: 10539008 0x400E1E0: _dl_map_object_deps (dl-deps.c:254)
+       n1: 10539008 0x4003A27: dl_main (rtld.c:1647)
+        n1: 10539008 0x4019630: _dl_sysdep_start (dl-sysdep.c:249)
+         n1: 10539008 0x4001C28: _dl_start (rtld.c:323)
+          n0: 10539008 0x4000C36: ??? (in /lib/x86_64-linux-gnu/ld-2.23.so)
+    n0: 2105344 in 1 place, below massif's threshold (1.00%)
+  n0: 114688 in 4 places, all below massif's threshold (1.00%)
+ n1: 3919872 0x5165DD8: brk (brk.c:31)
+  n1: 3919872 0x5165EB7: sbrk (sbrk.c:58)
+   n1: 3919872 0x50F08C7: __default_morecore (morecore.c:47)
+    n1: 3919872 0x50EA633: sysmalloc (malloc.c:2484)
+     n2: 3919872 0x50EB741: _int_malloc (malloc.c:3827)
+      n1: 3784704 0x50ED182: malloc (malloc.c:2913)
+       n0: 3784704 in 2 places, all below massif's threshold (1.00%)
+      n0: 135168 in 1 place, below massif's threshold (1.00%)
+ n0: 212992 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=80
+#-----------
+time=131443709
+mem_heap_B=249835520
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=81
+#-----------
+time=131977135
+mem_heap_B=249970688
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=82
+#-----------
+time=132510795
+mem_heap_B=250105856
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=83
+#-----------
+time=133044455
+mem_heap_B=250241024
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=84
+#-----------
+time=133577907
+mem_heap_B=250376192
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=85
+#-----------
+time=134111567
+mem_heap_B=250511360
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=86
+#-----------
+time=134645227
+mem_heap_B=250646528
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=87
+#-----------
+time=135178887
+mem_heap_B=250781696
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=88
+#-----------
+time=135712313
+mem_heap_B=250916864
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=89
+#-----------
+time=136245973
+mem_heap_B=251052032
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=detailed
+n4: 251052032 (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+ n4: 232808448 0x516A679: mmap (mmap.c:34)
+  n1: 134217728 0x50E63CF: new_heap (arena.c:438)
+   n1: 134217728 0x50E6C1F: arena_get2.part.3 (arena.c:646)
+    n1: 134217728 0x50ED248: malloc (malloc.c:2911)
+     n1: 134217728 0x4014D2: kernel_jacobi_1d_imper.omp_fn.0 (in /home/raghesh/uw-openmp/benchmarks/uwopenmp-global-barrier/polybench-3.2/stencils/jacobi-1d-imper/transreuse)
+      n1: 134217728 0x4C3943C: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+       n1: 134217728 0x4E536B8: start_thread (pthread_create.c:333)
+        n0: 134217728 0x51703DB: clone (clone.S:109)
+  n1: 67108864 0x50E635B: new_heap (arena.c:427)
+   n1: 67108864 0x50E6C1F: arena_get2.part.3 (arena.c:646)
+    n1: 67108864 0x50ED248: malloc (malloc.c:2911)
+     n1: 67108864 0x4014D2: kernel_jacobi_1d_imper.omp_fn.0 (in /home/raghesh/uw-openmp/benchmarks/uwopenmp-global-barrier/polybench-3.2/stencils/jacobi-1d-imper/transreuse)
+      n1: 67108864 0x4C3943C: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+       n1: 67108864 0x4E536B8: start_thread (pthread_create.c:333)
+        n0: 67108864 0x51703DB: clone (clone.S:109)
+  n1: 25178112 0x4E541D4: pthread_create@@GLIBC_2.2.5 (allocatestack.c:513)
+   n1: 25178112 0x4C3999E: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n1: 25178112 0x400D06: polybench_timer_start (in /home/raghesh/uw-openmp/benchmarks/uwopenmp-global-barrier/polybench-3.2/stencils/jacobi-1d-imper/transreuse)
+     n0: 25178112 0x4017B9: main (in /home/raghesh/uw-openmp/benchmarks/uwopenmp-global-barrier/polybench-3.2/stencils/jacobi-1d-imper/transreuse)
+  n1: 6303744 0x50EAAFD: sysmalloc (malloc.c:2323)
+   n1: 6303744 0x50EB741: _int_malloc (malloc.c:3827)
+    n1: 6303744 0x50EDDC8: calloc (malloc.c:3236)
+     n0: 6303744 in 4 places, all below massif's threshold (1.00%)
+ n2: 12759040 0x401B479: mmap (mmap.c:34)
+  n1: 12644352 0x40068CB: _dl_map_object_from_fd (dl-map-segments.h:56)
+   n2: 12644352 0x4008C25: _dl_map_object (dl-load.c:2476)
+    n1: 10539008 0x400DBA0: openaux (dl-deps.c:63)
+     n1: 10539008 0x4010562: _dl_catch_error (dl-error.c:187)
+      n1: 10539008 0x400E1E0: _dl_map_object_deps (dl-deps.c:254)
+       n1: 10539008 0x4003A27: dl_main (rtld.c:1647)
+        n1: 10539008 0x4019630: _dl_sysdep_start (dl-sysdep.c:249)
+         n1: 10539008 0x4001C28: _dl_start (rtld.c:323)
+          n0: 10539008 0x4000C36: ??? (in /lib/x86_64-linux-gnu/ld-2.23.so)
+    n0: 2105344 in 1 place, below massif's threshold (1.00%)
+  n0: 114688 in 4 places, all below massif's threshold (1.00%)
+ n1: 5271552 0x5165DD8: brk (brk.c:31)
+  n1: 5271552 0x5165EB7: sbrk (sbrk.c:58)
+   n1: 5271552 0x50F08C7: __default_morecore (morecore.c:47)
+    n1: 5271552 0x50EA633: sysmalloc (malloc.c:2484)
+     n2: 5271552 0x50EB741: _int_malloc (malloc.c:3827)
+      n2: 5136384 0x50ED182: malloc (malloc.c:2913)
+       n1: 2838528 0x401678: kernel_jacobi_1d_imper.omp_fn.0 (in /home/raghesh/uw-openmp/benchmarks/uwopenmp-global-barrier/polybench-3.2/stencils/jacobi-1d-imper/transreuse)
+        n0: 2838528 0x401805: main (in /home/raghesh/uw-openmp/benchmarks/uwopenmp-global-barrier/polybench-3.2/stencils/jacobi-1d-imper/transreuse)
+       n0: 2297856 in 1 place, below massif's threshold (1.00%)
+      n0: 135168 in 1 place, below massif's threshold (1.00%)
+ n0: 212992 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=90
+#-----------
+time=136779633
+mem_heap_B=251187200
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=91
+#-----------
+time=137313085
+mem_heap_B=251322368
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=92
+#-----------
+time=137846745
+mem_heap_B=251457536
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=93
+#-----------
+time=138380405
+mem_heap_B=251592704
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=94
+#-----------
+time=138914065
+mem_heap_B=251727872
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=95
+#-----------
+time=139447491
+mem_heap_B=251863040
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=96
+#-----------
+time=139981151
+mem_heap_B=251998208
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=97
+#-----------
+time=140514811
+mem_heap_B=252133376
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=98
+#-----------
+time=141048263
+mem_heap_B=252268544
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=99
+#-----------
+time=141581923
+mem_heap_B=252403712
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=detailed
+n4: 252403712 (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+ n4: 232808448 0x516A679: mmap (mmap.c:34)
+  n1: 134217728 0x50E63CF: new_heap (arena.c:438)
+   n1: 134217728 0x50E6C1F: arena_get2.part.3 (arena.c:646)
+    n1: 134217728 0x50ED248: malloc (malloc.c:2911)
+     n1: 134217728 0x4014D2: kernel_jacobi_1d_imper.omp_fn.0 (in /home/raghesh/uw-openmp/benchmarks/uwopenmp-global-barrier/polybench-3.2/stencils/jacobi-1d-imper/transreuse)
+      n1: 134217728 0x4C3943C: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+       n1: 134217728 0x4E536B8: start_thread (pthread_create.c:333)
+        n0: 134217728 0x51703DB: clone (clone.S:109)
+  n1: 67108864 0x50E635B: new_heap (arena.c:427)
+   n1: 67108864 0x50E6C1F: arena_get2.part.3 (arena.c:646)
+    n1: 67108864 0x50ED248: malloc (malloc.c:2911)
+     n1: 67108864 0x4014D2: kernel_jacobi_1d_imper.omp_fn.0 (in /home/raghesh/uw-openmp/benchmarks/uwopenmp-global-barrier/polybench-3.2/stencils/jacobi-1d-imper/transreuse)
+      n1: 67108864 0x4C3943C: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+       n1: 67108864 0x4E536B8: start_thread (pthread_create.c:333)
+        n0: 67108864 0x51703DB: clone (clone.S:109)
+  n1: 25178112 0x4E541D4: pthread_create@@GLIBC_2.2.5 (allocatestack.c:513)
+   n1: 25178112 0x4C3999E: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n1: 25178112 0x400D06: polybench_timer_start (in /home/raghesh/uw-openmp/benchmarks/uwopenmp-global-barrier/polybench-3.2/stencils/jacobi-1d-imper/transreuse)
+     n0: 25178112 0x4017B9: main (in /home/raghesh/uw-openmp/benchmarks/uwopenmp-global-barrier/polybench-3.2/stencils/jacobi-1d-imper/transreuse)
+  n1: 6303744 0x50EAAFD: sysmalloc (malloc.c:2323)
+   n1: 6303744 0x50EB741: _int_malloc (malloc.c:3827)
+    n1: 6303744 0x50EDDC8: calloc (malloc.c:3236)
+     n0: 6303744 in 4 places, all below massif's threshold (1.00%)
+ n2: 12759040 0x401B479: mmap (mmap.c:34)
+  n1: 12644352 0x40068CB: _dl_map_object_from_fd (dl-map-segments.h:56)
+   n2: 12644352 0x4008C25: _dl_map_object (dl-load.c:2476)
+    n1: 10539008 0x400DBA0: openaux (dl-deps.c:63)
+     n1: 10539008 0x4010562: _dl_catch_error (dl-error.c:187)
+      n1: 10539008 0x400E1E0: _dl_map_object_deps (dl-deps.c:254)
+       n1: 10539008 0x4003A27: dl_main (rtld.c:1647)
+        n1: 10539008 0x4019630: _dl_sysdep_start (dl-sysdep.c:249)
+         n1: 10539008 0x4001C28: _dl_start (rtld.c:323)
+          n0: 10539008 0x4000C36: ??? (in /lib/x86_64-linux-gnu/ld-2.23.so)
+    n0: 2105344 in 1 place, below massif's threshold (1.00%)
+  n0: 114688 in 4 places, all below massif's threshold (1.00%)
+ n1: 6623232 0x5165DD8: brk (brk.c:31)
+  n1: 6623232 0x5165EB7: sbrk (sbrk.c:58)
+   n1: 6623232 0x50F08C7: __default_morecore (morecore.c:47)
+    n1: 6623232 0x50EA633: sysmalloc (malloc.c:2484)
+     n2: 6623232 0x50EB741: _int_malloc (malloc.c:3827)
+      n2: 6488064 0x50ED182: malloc (malloc.c:2913)
+       n1: 3649536 0x401678: kernel_jacobi_1d_imper.omp_fn.0 (in /home/raghesh/uw-openmp/benchmarks/uwopenmp-global-barrier/polybench-3.2/stencils/jacobi-1d-imper/transreuse)
+        n0: 3649536 0x401805: main (in /home/raghesh/uw-openmp/benchmarks/uwopenmp-global-barrier/polybench-3.2/stencils/jacobi-1d-imper/transreuse)
+       n1: 2838528 0x401569: kernel_jacobi_1d_imper.omp_fn.0 (in /home/raghesh/uw-openmp/benchmarks/uwopenmp-global-barrier/polybench-3.2/stencils/jacobi-1d-imper/transreuse)
+        n0: 2838528 0x401805: main (in /home/raghesh/uw-openmp/benchmarks/uwopenmp-global-barrier/polybench-3.2/stencils/jacobi-1d-imper/transreuse)
+      n0: 135168 in 1 place, below massif's threshold (1.00%)
+ n0: 212992 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=100
+#-----------
+time=142115583
+mem_heap_B=252538880
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=101
+#-----------
+time=142649243
+mem_heap_B=252674048
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=102
+#-----------
+time=143182669
+mem_heap_B=252809216
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=103
+#-----------
+time=143716329
+mem_heap_B=252944384
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=104
+#-----------
+time=144249989
+mem_heap_B=253079552
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=105
+#-----------
+time=144783441
+mem_heap_B=253214720
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=106
+#-----------
+time=35315892314
+mem_heap_B=251117568
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=peak
+n4: 251117568 (page allocation syscalls) mmap/mremap/brk, --alloc-fns, etc.
+ n4: 230711296 0x516A679: mmap (mmap.c:34)
+  n1: 134217728 0x50E63CF: new_heap (arena.c:438)
+   n1: 134217728 0x50E6C1F: arena_get2.part.3 (arena.c:646)
+    n1: 134217728 0x50ED248: malloc (malloc.c:2911)
+     n1: 134217728 0x4014D2: kernel_jacobi_1d_imper.omp_fn.0 (in /home/raghesh/uw-openmp/benchmarks/uwopenmp-global-barrier/polybench-3.2/stencils/jacobi-1d-imper/transreuse)
+      n1: 134217728 0x4C3943C: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+       n1: 134217728 0x4E536B8: start_thread (pthread_create.c:333)
+        n0: 134217728 0x51703DB: clone (clone.S:109)
+  n1: 67108864 0x50E635B: new_heap (arena.c:427)
+   n1: 67108864 0x50E6C1F: arena_get2.part.3 (arena.c:646)
+    n1: 67108864 0x50ED248: malloc (malloc.c:2911)
+     n1: 67108864 0x4014D2: kernel_jacobi_1d_imper.omp_fn.0 (in /home/raghesh/uw-openmp/benchmarks/uwopenmp-global-barrier/polybench-3.2/stencils/jacobi-1d-imper/transreuse)
+      n1: 67108864 0x4C3943C: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+       n1: 67108864 0x4E536B8: start_thread (pthread_create.c:333)
+        n0: 67108864 0x51703DB: clone (clone.S:109)
+  n1: 25178112 0x4E541D4: pthread_create@@GLIBC_2.2.5 (allocatestack.c:513)
+   n1: 25178112 0x4C3999E: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+    n1: 25178112 0x400D06: polybench_timer_start (in /home/raghesh/uw-openmp/benchmarks/uwopenmp-global-barrier/polybench-3.2/stencils/jacobi-1d-imper/transreuse)
+     n0: 25178112 0x4017B9: main (in /home/raghesh/uw-openmp/benchmarks/uwopenmp-global-barrier/polybench-3.2/stencils/jacobi-1d-imper/transreuse)
+  n1: 4206592 0x50EAAFD: sysmalloc (malloc.c:2323)
+   n1: 4206592 0x50EB741: _int_malloc (malloc.c:3827)
+    n1: 4206592 0x50EDDC8: calloc (malloc.c:3236)
+     n0: 4206592 in 4 places, all below massif's threshold (1.00%)
+ n2: 12759040 0x401B479: mmap (mmap.c:34)
+  n1: 12644352 0x40068CB: _dl_map_object_from_fd (dl-map-segments.h:56)
+   n2: 12644352 0x4008C25: _dl_map_object (dl-load.c:2476)
+    n1: 10539008 0x400DBA0: openaux (dl-deps.c:63)
+     n1: 10539008 0x4010562: _dl_catch_error (dl-error.c:187)
+      n1: 10539008 0x400E1E0: _dl_map_object_deps (dl-deps.c:254)
+       n1: 10539008 0x4003A27: dl_main (rtld.c:1647)
+        n1: 10539008 0x4019630: _dl_sysdep_start (dl-sysdep.c:249)
+         n1: 10539008 0x4001C28: _dl_start (rtld.c:323)
+          n0: 10539008 0x4000C36: ??? (in /lib/x86_64-linux-gnu/ld-2.23.so)
+    n0: 2105344 in 1 place, below massif's threshold (1.00%)
+  n0: 114688 in 4 places, all below massif's threshold (1.00%)
+ n1: 7434240 0x5165DD8: brk (brk.c:31)
+  n1: 7434240 0x5165EB7: sbrk (sbrk.c:58)
+   n1: 7434240 0x50F08C7: __default_morecore (morecore.c:47)
+    n1: 7434240 0x50EA633: sysmalloc (malloc.c:2484)
+     n2: 7434240 0x50EB741: _int_malloc (malloc.c:3827)
+      n2: 7299072 0x50ED182: malloc (malloc.c:2913)
+       n1: 4055040 0x401678: kernel_jacobi_1d_imper.omp_fn.0 (in /home/raghesh/uw-openmp/benchmarks/uwopenmp-global-barrier/polybench-3.2/stencils/jacobi-1d-imper/transreuse)
+        n0: 4055040 0x401805: main (in /home/raghesh/uw-openmp/benchmarks/uwopenmp-global-barrier/polybench-3.2/stencils/jacobi-1d-imper/transreuse)
+       n1: 3244032 0x401569: kernel_jacobi_1d_imper.omp_fn.0 (in /home/raghesh/uw-openmp/benchmarks/uwopenmp-global-barrier/polybench-3.2/stencils/jacobi-1d-imper/transreuse)
+        n0: 3244032 0x401805: main (in /home/raghesh/uw-openmp/benchmarks/uwopenmp-global-barrier/polybench-3.2/stencils/jacobi-1d-imper/transreuse)
+      n0: 135168 in 1 place, below massif's threshold (1.00%)
+ n0: 212992 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=107
+#-----------
+time=35315892314
+mem_heap_B=251113472
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=108
+#-----------
+time=35315892373
+mem_heap_B=249012224
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty

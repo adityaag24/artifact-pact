@@ -1,0 +1,13 @@
+Preprocessing 01Knapsack.c using gcc
+Preprocessing 3MatrixMultiplication.c using gcc
+Preprocessing gemver.c using gcc
+Preprocessing leaderElect.c using gcc
+Preprocessing longestCommonSubsequence.c using gcc
+Preprocessing matrixChainMultiplication.c using gcc
+Preprocessing waveFront.c using gcc
+Processing 01Knapsack.i
+Processing 3MatrixMultiplication.i
+Processing gemver.i
+Processing longestCommonSubsequence.i
+Processing matrixChainMultiplication.i
+Processing waveFront.i

@@ -1,0 +1,10 @@
+Preprocessing gaussSeidel.c using gcc
+Preprocessing jacobian1D.c using gcc
+Preprocessing jacobian2D.c using gcc
+Preprocessing jacobian4D.c using gcc
+Preprocessing successiveOverRelaxation.c using gcc
+Processing gaussSeidel.i
+Processing jacobian1D.i
+Processing jacobian2D.i
+Processing jacobian4D.i
+Processing successiveOverRelaxation.i

@@ -1,0 +1,17 @@
+
+ Performance counter stats for './transreuse':
+
+   36,08,07,47,524      instructions                                                  (45.44%)
+    1,04,74,59,250      cache-references                                              (45.47%)
+       3,95,29,275      cache-misses              #    3.774 % of all cache refs      (45.50%)
+   16,06,46,14,735      L1-dcache-loads                                               (45.47%)
+    2,06,69,62,016      L1-dcache-load-misses     #   12.87% of all L1-dcache hits    (45.32%)
+   16,06,08,15,546      L1-dcache-loads                                               (18.19%)
+      62,47,50,195      LLC-loads                                                     (18.16%)
+      48,55,46,868      LLC-stores                                                    (18.18%)
+    6,49,70,20,488      branch-loads                                                  (27.30%)
+          9,71,542      branch-load-misses                                            (36.38%)
+         33,82,354      L1-icache-load-misses                                         (36.37%)
+
+       9.706538634 seconds time elapsed
+
